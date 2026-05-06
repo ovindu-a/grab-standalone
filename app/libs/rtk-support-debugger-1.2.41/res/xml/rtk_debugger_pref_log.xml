@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022. Realtek Corporation.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~         http://www.apache.org/licenses/LICENSE-2.0
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:key="development_preference_screen"
+    android:title="@string/rtk_pref_title_developer_optoins">
+
+    <PreferenceCategory
+        android:title="@string/rtk_pref_category_title_log"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreference
+            android:key="rtk_switch_debug"
+            android:summaryOff="@string/rtk_pref_title_debug_summary_off"
+            android:summaryOn="@string/rtk_pref_title_debug_summary_on"
+            android:switchTextOff="@string/rtk_switchTextOff"
+            android:switchTextOn="@string/rtk_switchTextOn"
+            android:title="@string/rtk_pref_title_debug"
+            app:iconSpaceReserved="false" />
+
+        <com.realsil.sdk.support.settings.RtkListPreference
+            android:entries="@array/rtk_debug_level_entries"
+            android:entryValues="@array/rtk_debug_level_values"
+            android:key="rtk_debug_log_level"
+            android:summary="{v}"
+            android:title="@string/rtk_pref_title_log_level"
+            app:iconSpaceReserved="false" />
+        <SwitchPreference
+            android:key="KEY_RTK_LOG_2_FILE"
+            android:summaryOff="@string/rtk_pref_title_log_2_file_summary_off"
+            android:summaryOn="@string/rtk_pref_title_log_2_file_summary_on"
+            android:switchTextOff="@string/rtk_switchTextOff"
+            android:switchTextOn="@string/rtk_switchTextOn"
+            android:title="@string/rtk_pref_title_log_2_file"
+            app:iconSpaceReserved="false" />
+        <Preference
+            android:key="LOG_CLEAR_CACHE_LOG_FILES"
+            android:summary="@string/rtk_pref_summary_clear_log"
+            android:switchTextOff="@string/rtk_switchTextOff"
+            android:switchTextOn="@string/rtk_switchTextOn"
+            android:title="@string/rtk_pref_title_clear_log"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreference
+            android:key="rtk_switch_log_auto_clear"
+            android:summary="是否打开我呢？"
+            android:summaryOff="@string/rtk_summaryOff"
+            android:summaryOn="@string/rtk_summaryOn_log"
+            android:switchTextOff="@string/rtk_switchTextOff"
+            android:switchTextOn="@string/rtk_switchTextOn"
+            android:title="@string/rtk_pref_title_log"
+            app:iconSpaceReserved="false" />
+
+        <androidx.preference.EditTextPreference
+            android:dialogTitle="@string/rtk_pref_title_log_retention_days"
+            android:inputType="number"
+            android:key="KEY_LOG_RETENTION_DAYS"
+            android:summary="{v}"
+            app:iconSpaceReserved="false"
+            android:title="@string/rtk_pref_title_log_retention_days"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/rtk_pref_category_title_general"
+        app:iconSpaceReserved="false">
+        <SwitchPreference
+            android:key="rtk_switch_dump_hci"
+            android:summary="是否打开我呢？"
+            android:summaryOff="@string/rtk_pref_title_dump_hci_summary"
+            android:summaryOn="@string/rtk_pref_title_dump_hci_summary"
+            android:switchTextOff="@string/rtk_switchTextOff"
+            android:switchTextOn="@string/rtk_switchTextOn"
+            android:title="@string/rtk_pref_title_dump_hci"
+            app:iconSpaceReserved="false" />
+        <!-- Dump HCI -->
+        <!--    <Preference-->
+        <!--        android:key="rtk_debug_dump_hci"-->
+        <!--        android:summary="@string/rtk_pref_title_dump_hci_summary"-->
+        <!--        android:title="@string/rtk_pref_title_dump_hci"-->
+        <!--        app:iconSpaceReserved="false">-->
+        <!--        <intent android:action="rtk.action.settings.DUMP_HCI" />-->
+        <!--    </Preference>-->
+
+        <SwitchPreference
+            android:key="switch_upgrade"
+            android:summary="是否打开我呢？"
+            android:summaryOff="@string/rtk_summaryOff"
+            android:summaryOn="@string/rtk_summaryOn_upgrade"
+            android:switchTextOff="@string/rtk_switchTextOff"
+            android:switchTextOn="@string/rtk_switchTextOn"
+            android:title="@string/rtk_pref_title_upgrade"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreference
+            android:key="switch_background"
+            android:summary="是否打开我呢？"
+            android:summaryOff="@string/rtk_summaryOff"
+            android:summaryOn="@string/rtk_summaryOn"
+            android:switchTextOff="@string/rtk_switchTextOff"
+            android:switchTextOn="@string/rtk_switchTextOn"
+            android:title="@string/rtk_pref_title_background_run"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

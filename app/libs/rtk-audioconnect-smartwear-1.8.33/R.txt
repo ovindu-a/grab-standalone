@@ -1,0 +1,7 @@
+int raw device_busy 0x0
+int raw ding 0x0
+int raw end_conversation 0x0
+int raw rtk_glass 0x0
+int raw start_conversation 0x0
+int raw take_picture 0x0
+int raw thinking 0x0

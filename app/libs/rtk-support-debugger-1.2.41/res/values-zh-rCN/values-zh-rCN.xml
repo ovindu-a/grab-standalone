@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rtk_pref_category_title_log">日志</string>
+    <string name="rtk_pref_title_category_sys_settings">系统</string>
+    <string name="rtk_pref_title_debug">调试</string>
+    <string name="rtk_pref_title_debug_level">调试等级</string>
+    <string name="rtk_pref_title_debug_summary_off">普通模式</string>
+    <string name="rtk_pref_title_debug_summary_on">调试模式，保存日志</string>
+    <string name="rtk_pref_title_developer_options_summary">打开开发者选项</string>
+    <string name="rtk_pref_title_developer_optoins">开发者选项</string>
+    <string name="rtk_pref_title_device_info">关于手机</string>
+    <string name="rtk_pref_title_device_info_summary">打开关于手机</string>
+    <string name="rtk_pref_title_log_level">日志等级</string>
+    <string name="rtk_pref_title_sys_settings_bluetooth">蓝牙</string>
+    <string name="rtk_pref_title_sys_settings_bluetooth_summary">打开系统蓝牙设置</string>
+    <string name="rtk_pref_title_sys_settings_location">定位服务</string>
+    <string name="rtk_pref_title_sys_settings_location_summary">打开系统定位服务</string>
+    <string name="rtk_support_debugger_legacy_storage_info">Legacy External Storage: %1$s</string>
+    <string name="rtk_support_debugger_open_storage_settings">Open Storage settings</string>
+    <string name="rtk_support_debugger_permission_granted_info">Permission granted: %1$s</string>
+    <string name="rtk_support_debugger_permission_used_info">Permission used: %1$s</string>
+    <string name="rtk_support_debugger_request_storage_permission">Request Storage permission</string>
+    <string name="rtk_support_debugger_sdk_codename_info">SDK codename: %1$s</string>
+    <string name="rtk_support_debugger_sdk_version_info">SDK version: %1$s</string>
+    <string name="rtk_support_debugger_title_certification">认证</string>
+    <string name="rtk_support_debugger_title_development_settings">开发者选项</string>
+    <string name="rtk_support_debugger_title_settings">Debugger Settings</string>
+    <string name="rtk_text_use_developer_optoins">使用开发者选项</string>
+    <string name="rtk_title_dependences_library">依赖库</string>
+    <string name="rtk_title_device_info">设备信息</string>
+    <string name="rtk_title_settigns_developer_optoins">开发者选项</string>
+    <string name="rtk_toast_developer_optoins">再点击 %1$d 步就可以使用开发者选项</string>
+    <string name="toast_certification_code_error">验证码错误</string>
+</resources>

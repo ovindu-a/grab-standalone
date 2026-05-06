@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rtk_td_dependence_lib_item"><![CDATA[<tr><td>%1$s:%2$s</td> <td>:%3$s</td></tr>]]></string>
+    <string name="rtk_td_device_info_item"><![CDATA[<tr><td>%1$s%2$s</td> <td>%3$s</td></tr>]]></string>
+    <string name="rtk_td_device_info_item_warn"><![CDATA[<tr><td>%1$s%2$s</td> <td>%3$s</td></tr>]]></string>
+</resources>

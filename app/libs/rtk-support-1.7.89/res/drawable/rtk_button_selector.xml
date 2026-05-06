@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022. Realtek Corporation.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~         http://www.apache.org/licenses/LICENSE-2.0
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_enabled="false" >
+        <shape>
+            <solid android:color="@color/secondaryGreyColor"/>
+
+            <!--<gradient   -->
+            	<!--android:startColor="#CCCCCC" android:endColor="#666666"   -->
+            	<!--android:type="linear" android:angle="90"  -->
+            	<!--android:centerX="0.5" android:centerY="0.5" /> -->
+            <!--<stroke android:width="0.5dp" android:color="@color/primaryGreyColor"/>-->
+            <corners android:radius="5dp" />
+        </shape>
+        
+    </item>
+    
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/primaryDarkColor"/>
+            <!--<gradient   -->
+            	<!--android:startColor="#99CCFF" android:endColor="#FFFFFF"   -->
+            	<!--android:type="linear" android:angle="90"  -->
+            	<!--android:centerX="0.5" android:centerY="0.5" /> -->
+            <!--<stroke android:width="0.5dp" android:color="@color/primaryDarkColor"/>-->
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+    
+    <item>
+        <shape>
+            <solid android:color="@color/primaryColor"/>
+            <!--<gradient   -->
+            	<!--android:startColor="#CCCCCC" android:endColor="#FFFFFF"   -->
+            	<!--android:type="linear" android:angle="90"  -->
+            	<!--android:centerX="0.5" android:centerY="0.5" /> -->
+            <!--<stroke android:width="0.5dp" android:color="@color/primaryColor"/>-->
+            <corners android:radius="5dp" />
+        </shape>
+        
+    </item>
+</selector>

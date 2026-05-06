@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cancel">CANCEL</string>
+    <string name="menu_scan">SCAN</string>
+    <string name="menu_stop">STOP</string>
+    <string name="ok">OK</string>
+    <string name="rtk_message_exit_app">Exit App?</string>
+    <string name="rtk_pref_title_background_run">Background running</string>
+    <string name="rtk_pref_title_upgrade">Auto check upgrade</string>
+    <string name="rtk_summaryOff">OFF</string>
+    <string name="rtk_summaryOn">ON</string>
+    <string name="rtk_summaryOn_upgrade">Auto check upgrade</string>
+    <string name="rtk_switchTextOff">OFF</string>
+    <string name="rtk_switchTextOn">ON</string>
+    <string name="rtk_title_device_info">Device Info</string>
+    <string name="rtksdk_action_cancel">Cancel</string>
+    <string name="rtksdk_action_scan">Scan</string>
+    <string name="rtksdk_button_checkupdate">Version Update</string>
+    <string name="rtksdk_button_submit">SUBMIT</string>
+    <string name="rtksdk_copyright">
+       Copyright ©2025 Realtek Semiconductor Corp.\nAll rights reserved.
+    </string>
+    <string name="rtksdk_device_bluetooth_address">Bluetooth Address: %1$s</string>
+    <string name="rtksdk_menu_scan_mode">Scan Mode</string>
+    <string name="rtksdk_permission_cancel">CANCEL</string>
+    <string name="rtksdk_permission_denied">Permission Denied: %1$s</string>
+    <string name="rtksdk_permission_ok">Grant Permissions</string>
+    <string name="rtksdk_scan_mode_dual">DUAL</string>
+    <string name="rtksdk_scan_mode_gatt">GATT</string>
+    <string name="rtksdk_scan_mode_gatt_strict">GATT STRICT</string>
+    <string name="rtksdk_scan_mode_spp">SPP</string>
+    <string name="rtksdk_scan_mode_spp_strict">SPP STRICT</string>
+    <string name="rtksdk_scanner_empty">No device found</string>
+    <string name="rtksdk_scanner_subtitle_available_devices">Available Devices</string>
+    <string name="rtksdk_scanner_subtitle_bonded_devices">Bondeded Devices</string>
+    <string name="rtksdk_title_scanner">Scanner</string>
+    <string name="rtksdk_title_select_file">Select File</string>
+    <string name="rtksdk_toast_bt_enable">Bt is enabled!</string>
+    <string name="rtksdk_toast_bt_not_enable">Bt is disabled!</string>
+    <string name="unknown_device">Unknown Device</string>
+</resources>

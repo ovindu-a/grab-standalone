@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <string-array name="rtk_app_file_browser">
+        <item>ES File Manager</item>
+        <item>File Manager</item>
+        <item>RE File Manager</item>
+        <item>Search for others</item>
+    </string-array>
+    <string-array name="rtk_app_file_browser_action">
+        <item>market://details?id=com.estrongs.android.pop</item>
+        <item>market://details?id=com.rhmsoft.fm</item>
+        <item>market://details?id=com.speedsoftware.rootexplorer</item>
+        <item>market://search?q=file manager</item>
+    </string-array>
+    <string-array name="rtk_pref_bt_scan_mechanism_entries">
+        <item>ALL</item>
+        <item>FILTER_ONE</item>
+    </string-array>
+    <string-array name="rtk_pref_bt_scan_mechanism_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="rtk_pref_bt_scan_mode_entries">
+        <item>DUAL</item>
+        <item>BLE</item>
+        <item>BLE ONLY</item>
+        <item>BR/EDR</item>
+        <item>BR/EDR ONLY</item>
+    </string-array>
+    <string-array name="rtk_pref_bt_scan_mode_values">
+        <item>0</item>
+        <item>16</item>
+        <item>17</item>
+        <item>32</item>
+        <item>31</item>
+    </string-array>
+    <attr format="reference" name="arrowSrc"/>
+    <attr format="integer" name="bottomTextScale"/>
+    <attr format="boolean" name="bottomTextVisible"/>
+    <attr format="boolean" name="isArrowVisible"/>
+    <attr format="boolean" name="isLogoVisible"/>
+    <attr format="reference" name="itemdecoration_line"/>
+    <attr format="integer" name="maxValue"/>
+    <attr format="integer" name="minValue"/>
+    <attr format="integer" name="progressMulti"/>
+    <attr name="rtk_position">
+        <enum name="top" value="0"/>
+        <enum name="center" value="1"/>
+        <enum name="bottom" value="2"/>
+        <enum name="single" value="3"/>
+        <enum name="none" value="4"/>
+    </attr>
+    <attr format="string|reference" name="secondText"/>
+    <attr format="reference|color" name="secondTextColor"/>
+    <attr format="dimension" name="secondTextSize"/>
+    <attr format="boolean" name="secondTextVisible"/>
+    <attr format="reference" name="src"/>
+    <attr name="startTextGravity">
+        <enum name="start" value="0"/>
+        <enum name="center" value="1"/>
+        <enum name="end" value="2"/>
+    </attr>
+    <attr format="string|reference" name="subText"/>
+    <attr format="reference|color" name="subTextColor"/>
+    <attr name="subTextGravity">
+        <enum name="start" value="0"/>
+        <enum name="center" value="1"/>
+        <enum name="end" value="2"/>
+    </attr>
+    <attr format="integer" name="subTextMaxLines"/>
+    <attr format="dimension" name="subTextSize"/>
+    <attr format="boolean" name="subTextVisible"/>
+    <attr format="string|reference" name="text"/>
+    <attr format="reference|color" name="textColor"/>
+    <attr format="dimension" name="textSize"/>
+    <attr format="string|reference" name="title"/>
+    <attr format="reference|color" name="titleColor"/>
+    <attr format="string|reference" name="topText"/>
+    <attr format="boolean" name="topTextVisible"/>
+    <attr name="visibility">
+        <enum name="visible" value="0"/>
+        <enum name="invisible" value="1"/>
+        <enum name="gone" value="2"/>
+    </attr>
+    <color name="accentColor">#FF4081</color>
+    <color name="actionBarColor">#009CDE</color>
+    <color name="actionBarColorDark">#0081B7</color>
+    <color name="actionBarDarkColor">#0081B7</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorControlNormal">#fff</color>
+    <color name="colorPrimary">@color/primaryColor</color>
+    <color name="colorPrimaryDark">#0069c0</color>
+    <color name="danger">#DC3545</color>
+    <color name="dividerColor">#BBBDC0</color>
+    <color name="guide_overlay">#e2353535</color>
+    <color name="headerBackgroundColor">#009ada</color>
+    <color name="headerTextColor">#009ada</color>
+    <color name="material_amber_100">#FFECB3</color>
+    <color name="material_amber_200">#FFE082</color>
+    <color name="material_amber_300">#FFD54F</color>
+    <color name="material_amber_400">#FFCA28</color>
+    <color name="material_amber_50">#FFF8E1</color>
+    <color name="material_amber_500">#FFC107</color>
+    <color name="material_amber_600">#FFB300</color>
+    <color name="material_amber_700">#FFA000</color>
+    <color name="material_amber_800">#FF8F00</color>
+    <color name="material_amber_900">#FF6F00</color>
+    <color name="material_amber_A100">#FFE57F</color>
+    <color name="material_amber_A200">#FFD740</color>
+    <color name="material_amber_A400">#FFC400</color>
+    <color name="material_amber_A700">#FFAB00</color>
+    <color name="material_black">#000000</color>
+    <color name="material_black_100">#5E5E5E</color>
+    <color name="material_black_200">#424242</color>
+    <color name="material_black_300">#1F1F1F</color>
+    <color name="material_black_400">#0F0F0F</color>
+    <color name="material_black_50">#858585</color>
+    <color name="material_black_500">#000000</color>
+    <color name="material_black_600">#000000</color>
+    <color name="material_black_700">#000000</color>
+    <color name="material_black_800">#000000</color>
+    <color name="material_black_900">#000000</color>
+    <color name="material_black_A100">#858585</color>
+    <color name="material_black_A200">#5E5E5E</color>
+    <color name="material_black_A400">#0F0F0F</color>
+    <color name="material_black_A700">#000000</color>
+    <color name="material_blue_100">#BBDEFB</color>
+    <color name="material_blue_200">#90CAF9</color>
+    <color name="material_blue_300">#64B5F6</color>
+    <color name="material_blue_400">#42A5F5</color>
+    <color name="material_blue_50">#E3F2FD</color>
+    <color name="material_blue_500">#2196F3</color>
+    <color name="material_blue_600">#1E88E5</color>
+    <color name="material_blue_700">#1976D2</color>
+    <color name="material_blue_800">#1565C0</color>
+    <color name="material_blue_900">#0D47A1</color>
+    <color name="material_blue_A100">#82B1FF</color>
+    <color name="material_blue_A200">#448AFF</color>
+    <color name="material_blue_A400">#2979FF</color>
+    <color name="material_blue_A700">#2962FF</color>
+    <color name="material_blue_grey_100">#CFD8DC</color>
+    <color name="material_blue_grey_200">#B0BEC5</color>
+    <color name="material_blue_grey_300">#90A4AE</color>
+    <color name="material_blue_grey_400">#78909C</color>
+    <color name="material_blue_grey_50">#ECEFF1</color>
+    <color name="material_blue_grey_500">#607D8B</color>
+    <color name="material_blue_grey_600">#546E7A</color>
+    <color name="material_blue_grey_700">#455A64</color>
+    <color name="material_blue_grey_800">#37474F</color>
+    <color name="material_blue_grey_900">#263238</color>
+    <color name="material_brown_100">#D7CCC8</color>
+    <color name="material_brown_200">#BCAAA4</color>
+    <color name="material_brown_300">#A1887F</color>
+    <color name="material_brown_400">#8D6E63</color>
+    <color name="material_brown_50">#EFEBE9</color>
+    <color name="material_brown_500">#795548</color>
+    <color name="material_brown_600">#6D4C41</color>
+    <color name="material_brown_700">#5D4037</color>
+    <color name="material_brown_800">#4E342E</color>
+    <color name="material_brown_900">#3E2723</color>
+    <color name="material_cyan_100">#B2EBF2</color>
+    <color name="material_cyan_200">#80DEEA</color>
+    <color name="material_cyan_300">#4DD0E1</color>
+    <color name="material_cyan_400">#26C6DA</color>
+    <color name="material_cyan_50">#E0F7FA</color>
+    <color name="material_cyan_500">#00BCD4</color>
+    <color name="material_cyan_600">#00ACC1</color>
+    <color name="material_cyan_700">#0097A7</color>
+    <color name="material_cyan_800">#00838F</color>
+    <color name="material_cyan_900">#006064</color>
+    <color name="material_cyan_A100">#84FFFF</color>
+    <color name="material_cyan_A200">#18FFFF</color>
+    <color name="material_cyan_A400">#00E5FF</color>
+    <color name="material_cyan_A700">#00B8D4</color>
+    <color name="material_deep_orange_100">#FFCCBC</color>
+    <color name="material_deep_orange_200">#FFAB91</color>
+    <color name="material_deep_orange_300">#FF8A65</color>
+    <color name="material_deep_orange_400">#FF7043</color>
+    <color name="material_deep_orange_50">#FBE9E7</color>
+    <color name="material_deep_orange_500">#FF5722</color>
+    <color name="material_deep_orange_600">#F4511E</color>
+    <color name="material_deep_orange_700">#E64A19</color>
+    <color name="material_deep_orange_800">#D84315</color>
+    <color name="material_deep_orange_900">#BF360C</color>
+    <color name="material_deep_orange_A100">#FF9E80</color>
+    <color name="material_deep_orange_A200">#FF6E40</color>
+    <color name="material_deep_orange_A400">#FF3D00</color>
+    <color name="material_deep_orange_A700">#DD2C00</color>
+    <color name="material_deep_purple_100">#D1C4E9</color>
+    <color name="material_deep_purple_200">#B39DDB</color>
+    <color name="material_deep_purple_300">#9575CD</color>
+    <color name="material_deep_purple_400">#7E57C2</color>
+    <color name="material_deep_purple_50">#EDE7F6</color>
+    <color name="material_deep_purple_500">#673AB7</color>
+    <color name="material_deep_purple_600">#5E35B1</color>
+    <color name="material_deep_purple_700">#512DA8</color>
+    <color name="material_deep_purple_800">#4527A0</color>
+    <color name="material_deep_purple_900">#311B92</color>
+    <color name="material_deep_purple_A100">#B388FF</color>
+    <color name="material_deep_purple_A200">#7C4DFF</color>
+    <color name="material_deep_purple_A400">#651FFF</color>
+    <color name="material_deep_purple_A700">#6200EA</color>
+    <color name="material_green_100">#C8E6C9</color>
+    <color name="material_green_200">#A5D6A7</color>
+    <color name="material_green_300">#81C784</color>
+    <color name="material_green_400">#66BB6A</color>
+    <color name="material_green_50">#E8F5E9</color>
+    <color name="material_green_500">#4CAF50</color>
+    <color name="material_green_600">#43A047</color>
+    <color name="material_green_700">#388E3C</color>
+    <color name="material_green_800">#2E7D32</color>
+    <color name="material_green_900">#1B5E20</color>
+    <color name="material_green_A100">#B9F6CA</color>
+    <color name="material_green_A200">#69F0AE</color>
+    <color name="material_green_A400">#00E676</color>
+    <color name="material_green_A700">#00C853</color>
+    <color name="material_grey_200">#EEEEEE</color>
+    <color name="material_grey_300">#E0E0E0</color>
+    <color name="material_grey_400">#BDBDBD</color>
+    <color name="material_grey_500">#9E9E9E</color>
+    <color name="material_grey_600">#757575</color>
+    <color name="material_grey_700">#616161</color>
+    <color name="material_grey_800">#424242</color>
+    <color name="material_grey_900">#212121</color>
+    <color name="material_indigo_100">#C5CAE9</color>
+    <color name="material_indigo_200">#9FA8DA</color>
+    <color name="material_indigo_300">#7986CB</color>
+    <color name="material_indigo_400">#5C6BC0</color>
+    <color name="material_indigo_50">#E8EAF6</color>
+    <color name="material_indigo_500">#3F51B5</color>
+    <color name="material_indigo_600">#3949AB</color>
+    <color name="material_indigo_700">#303F9F</color>
+    <color name="material_indigo_800">#283593</color>
+    <color name="material_indigo_900">#1A237E</color>
+    <color name="material_indigo_A100">#8C9EFF</color>
+    <color name="material_indigo_A200">#536DFE</color>
+    <color name="material_indigo_A400">#3D5AFE</color>
+    <color name="material_indigo_A700">#304FFE</color>
+    <color name="material_light_blue_100">#B3E5FC</color>
+    <color name="material_light_blue_200">#81D4FA</color>
+    <color name="material_light_blue_300">#4FC3F7</color>
+    <color name="material_light_blue_400">#29B6F6</color>
+    <color name="material_light_blue_50">#E1F5FE</color>
+    <color name="material_light_blue_500">#03A9F4</color>
+    <color name="material_light_blue_600">#039BE5</color>
+    <color name="material_light_blue_700">#0288D1</color>
+    <color name="material_light_blue_800">#0277BD</color>
+    <color name="material_light_blue_900">#01579B</color>
+    <color name="material_light_blue_A100">#80D8FF</color>
+    <color name="material_light_blue_A200">#40C4FF</color>
+    <color name="material_light_blue_A400">#00B0FF</color>
+    <color name="material_light_blue_A700">#0091EA</color>
+    <color name="material_light_green_100">#DCEDC8</color>
+    <color name="material_light_green_200">#C5E1A5</color>
+    <color name="material_light_green_300">#AED581</color>
+    <color name="material_light_green_400">#9CCC65</color>
+    <color name="material_light_green_50">#F1F8E9</color>
+    <color name="material_light_green_500">#8BC34A</color>
+    <color name="material_light_green_600">#7CB342</color>
+    <color name="material_light_green_700">#689F38</color>
+    <color name="material_light_green_800">#558B2F</color>
+    <color name="material_light_green_900">#33691E</color>
+    <color name="material_light_green_A100">#CCFF90</color>
+    <color name="material_light_green_A200">#B2FF59</color>
+    <color name="material_light_green_A400">#76FF03</color>
+    <color name="material_light_green_A700">#64DD17</color>
+    <color name="material_lime_100">#F0F4C3</color>
+    <color name="material_lime_200">#E6EE9C</color>
+    <color name="material_lime_300">#DCE775</color>
+    <color name="material_lime_400">#D4E157</color>
+    <color name="material_lime_50">#F9FBE7</color>
+    <color name="material_lime_500">#CDDC39</color>
+    <color name="material_lime_600">#C0CA33</color>
+    <color name="material_lime_700">#AFB42B</color>
+    <color name="material_lime_800">#9E9D24</color>
+    <color name="material_lime_900">#827717</color>
+    <color name="material_lime_A100">#F4FF81</color>
+    <color name="material_lime_A200">#EEFF41</color>
+    <color name="material_lime_A400">#C6FF00</color>
+    <color name="material_lime_A700">#AEEA00</color>
+    <color name="material_orange_100">#FFE0B2</color>
+    <color name="material_orange_200">#FFCC80</color>
+    <color name="material_orange_300">#FFB74D</color>
+    <color name="material_orange_400">#FFA726</color>
+    <color name="material_orange_50">#FFF3E0</color>
+    <color name="material_orange_500">#FF9800</color>
+    <color name="material_orange_600">#FB8C00</color>
+    <color name="material_orange_700">#F57C00</color>
+    <color name="material_orange_800">#EF6C00</color>
+    <color name="material_orange_900">#E65100</color>
+    <color name="material_orange_A100">#FFD180</color>
+    <color name="material_orange_A200">#FFAB40</color>
+    <color name="material_orange_A400">#FF9100</color>
+    <color name="material_orange_A700">#FF6D00</color>
+    <color name="material_pink_100">#F8BBD0</color>
+    <color name="material_pink_200">#F48FB1</color>
+    <color name="material_pink_300">#F06292</color>
+    <color name="material_pink_400">#EC407A</color>
+    <color name="material_pink_50">#FCE4EC</color>
+    <color name="material_pink_500">#E91E63</color>
+    <color name="material_pink_600">#D81B60</color>
+    <color name="material_pink_700">#C2185B</color>
+    <color name="material_pink_800">#AD1457</color>
+    <color name="material_pink_900">#880E4F</color>
+    <color name="material_pink_A100">#FF80AB</color>
+    <color name="material_pink_A200">#FF4081</color>
+    <color name="material_pink_A400">#F50057</color>
+    <color name="material_pink_A700">#C51162</color>
+    <color name="material_purple_100">#E1BEE7</color>
+    <color name="material_purple_200">#CE93D8</color>
+    <color name="material_purple_300">#BA68C8</color>
+    <color name="material_purple_400">#AB47BC</color>
+    <color name="material_purple_50">#F3E5F5</color>
+    <color name="material_purple_500">#9C27B0</color>
+    <color name="material_purple_600">#8E24AA</color>
+    <color name="material_purple_700">#7B1FA2</color>
+    <color name="material_purple_800">#6A1B9A</color>
+    <color name="material_purple_900">#4A148C</color>
+    <color name="material_purple_A100">#EA80FC</color>
+    <color name="material_purple_A200">#E040FB</color>
+    <color name="material_purple_A400">#D500F9</color>
+    <color name="material_purple_A700">#AA00FF</color>
+    <color name="material_red_100">#FFCDD2</color>
+    <color name="material_red_200">#EF9A9A</color>
+    <color name="material_red_300">#E57373</color>
+    <color name="material_red_400">#EF5350</color>
+    <color name="material_red_50">#FFEBEE</color>
+    <color name="material_red_500">#F44336</color>
+    <color name="material_red_600">#E53935</color>
+    <color name="material_red_700">#D32F2F</color>
+    <color name="material_red_800">#C62828</color>
+    <color name="material_red_900">#B71C1C</color>
+    <color name="material_red_A100">#FF8A80</color>
+    <color name="material_red_A200">#FF5252</color>
+    <color name="material_red_A400">#FF1744</color>
+    <color name="material_red_A700">#D50000</color>
+    <color name="material_teal_100">#B2DFDB</color>
+    <color name="material_teal_200">#80CBC4</color>
+    <color name="material_teal_300">#4DB6AC</color>
+    <color name="material_teal_400">#26A69A</color>
+    <color name="material_teal_50">#E0F2F1</color>
+    <color name="material_teal_500">#009688</color>
+    <color name="material_teal_600">#00897B</color>
+    <color name="material_teal_700">#00796B</color>
+    <color name="material_teal_800">#00695C</color>
+    <color name="material_teal_900">#004D40</color>
+    <color name="material_teal_A100">#A7FFEB</color>
+    <color name="material_teal_A200">#64FFDA</color>
+    <color name="material_teal_A400">#1DE9B6</color>
+    <color name="material_teal_A700">#00BFA5</color>
+    <color name="material_white">#FFFFFF</color>
+    <color name="material_white_100">#FFFFFF</color>
+    <color name="material_white_200">#FFFFFF</color>
+    <color name="material_white_300">#FFFFFF</color>
+    <color name="material_white_400">#FFFFFF</color>
+    <color name="material_white_50">#FFFFFF</color>
+    <color name="material_white_500">#FFFFFF</color>
+    <color name="material_white_600">#F0F0F0</color>
+    <color name="material_white_700">#E0E0E0</color>
+    <color name="material_white_800">#D1D1D1</color>
+    <color name="material_white_900">#C2C2C2</color>
+    <color name="material_white_A100">#FFFFFF</color>
+    <color name="material_white_A200">#FFFFFF</color>
+    <color name="material_white_A400">#FFFFFF</color>
+    <color name="material_white_A700">#E0E0E0</color>
+    <color name="material_yellow_100">#FFF9C4</color>
+    <color name="material_yellow_200">#FFF59D</color>
+    <color name="material_yellow_300">#FFF176</color>
+    <color name="material_yellow_400">#FFEE58</color>
+    <color name="material_yellow_50">#FFFDE7</color>
+    <color name="material_yellow_500">#FFEB3B</color>
+    <color name="material_yellow_600">#FDD835</color>
+    <color name="material_yellow_700">#FBC02D</color>
+    <color name="material_yellow_800">#F9A825</color>
+    <color name="material_yellow_900">#F57F17</color>
+    <color name="material_yellow_A100">#FFFF8D</color>
+    <color name="material_yellow_A200">#FFFF00</color>
+    <color name="material_yellow_A400">#FFEA00</color>
+    <color name="material_yellow_A700">#FFD600</color>
+    <color name="md_theme_background">#F9F9FF</color>
+    <color name="md_theme_background_highContrast">#F9F9FF</color>
+    <color name="md_theme_background_mediumContrast">#F9F9FF</color>
+    <color name="md_theme_error">#BA1A1A</color>
+    <color name="md_theme_errorContainer">#FFDAD6</color>
+    <color name="md_theme_errorContainer_highContrast">#98000A</color>
+    <color name="md_theme_errorContainer_mediumContrast">#CF2C27</color>
+    <color name="md_theme_error_highContrast">#600004</color>
+    <color name="md_theme_error_mediumContrast">#740006</color>
+    <color name="md_theme_inverseOnSurface">#F0F0F7</color>
+    <color name="md_theme_inverseOnSurface_highContrast">#FFFFFF</color>
+    <color name="md_theme_inverseOnSurface_mediumContrast">#F0F0F7</color>
+    <color name="md_theme_inversePrimary">#AAC7FF</color>
+    <color name="md_theme_inversePrimary_highContrast">#AAC7FF</color>
+    <color name="md_theme_inversePrimary_mediumContrast">#AAC7FF</color>
+    <color name="md_theme_inverseSurface">#2E3036</color>
+    <color name="md_theme_inverseSurface_highContrast">#2E3036</color>
+    <color name="md_theme_inverseSurface_mediumContrast">#2E3036</color>
+    <color name="md_theme_onBackground">#191C20</color>
+    <color name="md_theme_onBackground_highContrast">#191C20</color>
+    <color name="md_theme_onBackground_mediumContrast">#191C20</color>
+    <color name="md_theme_onError">#FFFFFF</color>
+    <color name="md_theme_onErrorContainer">#93000A</color>
+    <color name="md_theme_onErrorContainer_highContrast">#FFFFFF</color>
+    <color name="md_theme_onErrorContainer_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_onError_highContrast">#FFFFFF</color>
+    <color name="md_theme_onError_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_onPrimaryContainer">#284777</color>
+    <color name="md_theme_onPrimaryContainer_highContrast">#FFFFFF</color>
+    <color name="md_theme_onPrimaryContainer_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_onPrimaryFixed">#001B3E</color>
+    <color name="md_theme_onPrimaryFixedVariant">#284777</color>
+    <color name="md_theme_onPrimaryFixedVariant_highContrast">#FFFFFF</color>
+    <color name="md_theme_onPrimaryFixedVariant_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_onPrimaryFixed_highContrast">#FFFFFF</color>
+    <color name="md_theme_onPrimaryFixed_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_onPrimary_highContrast">#FFFFFF</color>
+    <color name="md_theme_onPrimary_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_onSecondaryContainer">#3E4759</color>
+    <color name="md_theme_onSecondaryContainer_highContrast">#FFFFFF</color>
+    <color name="md_theme_onSecondaryContainer_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_onSecondaryFixed">#131C2B</color>
+    <color name="md_theme_onSecondaryFixedVariant">#3E4759</color>
+    <color name="md_theme_onSecondaryFixedVariant_highContrast">#FFFFFF</color>
+    <color name="md_theme_onSecondaryFixedVariant_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_onSecondaryFixed_highContrast">#FFFFFF</color>
+    <color name="md_theme_onSecondaryFixed_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_onSecondary_highContrast">#FFFFFF</color>
+    <color name="md_theme_onSecondary_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_onSurface">#191C20</color>
+    <color name="md_theme_onSurfaceVariant">#44474E</color>
+    <color name="md_theme_onSurfaceVariant_highContrast">#000000</color>
+    <color name="md_theme_onSurfaceVariant_mediumContrast">#33363E</color>
+    <color name="md_theme_onSurface_highContrast">#000000</color>
+    <color name="md_theme_onSurface_mediumContrast">#0F1116</color>
+    <color name="md_theme_onTertiary">#FFFFFF</color>
+    <color name="md_theme_onTertiaryContainer">#573E5C</color>
+    <color name="md_theme_onTertiaryContainer_highContrast">#FFFFFF</color>
+    <color name="md_theme_onTertiaryContainer_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_onTertiaryFixed">#28132E</color>
+    <color name="md_theme_onTertiaryFixedVariant">#573E5C</color>
+    <color name="md_theme_onTertiaryFixedVariant_highContrast">#FFFFFF</color>
+    <color name="md_theme_onTertiaryFixedVariant_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_onTertiaryFixed_highContrast">#FFFFFF</color>
+    <color name="md_theme_onTertiaryFixed_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_onTertiary_highContrast">#FFFFFF</color>
+    <color name="md_theme_onTertiary_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_outline">#74777F</color>
+    <color name="md_theme_outlineVariant">#C4C6D0</color>
+    <color name="md_theme_outlineVariant_highContrast">#464951</color>
+    <color name="md_theme_outlineVariant_mediumContrast">#6A6D75</color>
+    <color name="md_theme_outline_highContrast">#292C33</color>
+    <color name="md_theme_outline_mediumContrast">#4F525A</color>
+    <color name="md_theme_primary">#415F91</color>
+    <color name="md_theme_primaryContainer">#D7E3FF</color>
+    <color name="md_theme_primaryContainer_highContrast">#2A497A</color>
+    <color name="md_theme_primaryContainer_mediumContrast">#506DA0</color>
+    <color name="md_theme_primaryFixed">#D7E3FF</color>
+    <color name="md_theme_primaryFixedDim">#AAC7FF</color>
+    <color name="md_theme_primaryFixedDim_highContrast">#0E3262</color>
+    <color name="md_theme_primaryFixedDim_mediumContrast">#375586</color>
+    <color name="md_theme_primaryFixed_highContrast">#2A497A</color>
+    <color name="md_theme_primaryFixed_mediumContrast">#506DA0</color>
+    <color name="md_theme_primary_highContrast">#042B5B</color>
+    <color name="md_theme_primary_mediumContrast">#133665</color>
+    <color name="md_theme_scrim">#000000</color>
+    <color name="md_theme_scrim_highContrast">#000000</color>
+    <color name="md_theme_scrim_mediumContrast">#000000</color>
+    <color name="md_theme_secondary">#565E71</color>
+    <color name="md_theme_secondaryContainer">#DAE2F9</color>
+    <color name="md_theme_secondaryContainer_highContrast">#41495B</color>
+    <color name="md_theme_secondaryContainer_mediumContrast">#646D80</color>
+    <color name="md_theme_secondaryFixed">#DAE2F9</color>
+    <color name="md_theme_secondaryFixedDim">#BEC6DC</color>
+    <color name="md_theme_secondaryFixedDim_highContrast">#2A3344</color>
+    <color name="md_theme_secondaryFixedDim_mediumContrast">#4C5567</color>
+    <color name="md_theme_secondaryFixed_highContrast">#41495B</color>
+    <color name="md_theme_secondaryFixed_mediumContrast">#646D80</color>
+    <color name="md_theme_secondary_highContrast">#242C3D</color>
+    <color name="md_theme_secondary_mediumContrast">#2E3647</color>
+    <color name="md_theme_surface">#F9F9FF</color>
+    <color name="md_theme_surfaceBright">#F9F9FF</color>
+    <color name="md_theme_surfaceBright_highContrast">#F9F9FF</color>
+    <color name="md_theme_surfaceBright_mediumContrast">#F9F9FF</color>
+    <color name="md_theme_surfaceContainer">#EDEDF4</color>
+    <color name="md_theme_surfaceContainerHigh">#E7E8EE</color>
+    <color name="md_theme_surfaceContainerHigh_highContrast">#D3D4DB</color>
+    <color name="md_theme_surfaceContainerHigh_mediumContrast">#DCDCE3</color>
+    <color name="md_theme_surfaceContainerHighest">#E2E2E9</color>
+    <color name="md_theme_surfaceContainerHighest_highContrast">#C5C6CD</color>
+    <color name="md_theme_surfaceContainerHighest_mediumContrast">#D1D1D8</color>
+    <color name="md_theme_surfaceContainerLow">#F3F3FA</color>
+    <color name="md_theme_surfaceContainerLow_highContrast">#F0F0F7</color>
+    <color name="md_theme_surfaceContainerLow_mediumContrast">#F3F3FA</color>
+    <color name="md_theme_surfaceContainerLowest">#FFFFFF</color>
+    <color name="md_theme_surfaceContainerLowest_highContrast">#FFFFFF</color>
+    <color name="md_theme_surfaceContainerLowest_mediumContrast">#FFFFFF</color>
+    <color name="md_theme_surfaceContainer_highContrast">#E2E2E9</color>
+    <color name="md_theme_surfaceContainer_mediumContrast">#E7E8EE</color>
+    <color name="md_theme_surfaceDim">#D9D9E0</color>
+    <color name="md_theme_surfaceDim_highContrast">#B8B8BF</color>
+    <color name="md_theme_surfaceDim_mediumContrast">#C5C6CD</color>
+    <color name="md_theme_surfaceVariant">#E0E2EC</color>
+    <color name="md_theme_surfaceVariant_highContrast">#E0E2EC</color>
+    <color name="md_theme_surfaceVariant_mediumContrast">#E0E2EC</color>
+    <color name="md_theme_surface_highContrast">#F9F9FF</color>
+    <color name="md_theme_surface_mediumContrast">#F9F9FF</color>
+    <color name="md_theme_tertiary">#705574</color>
+    <color name="md_theme_tertiaryContainer">#FAD8FD</color>
+    <color name="md_theme_tertiaryContainer_highContrast">#59405E</color>
+    <color name="md_theme_tertiaryContainer_mediumContrast">#7F6484</color>
+    <color name="md_theme_tertiaryFixed">#FAD8FD</color>
+    <color name="md_theme_tertiaryFixedDim">#DDBCE0</color>
+    <color name="md_theme_tertiaryFixedDim_highContrast">#412A47</color>
+    <color name="md_theme_tertiaryFixedDim_mediumContrast">#664C6A</color>
+    <color name="md_theme_tertiaryFixed_highContrast">#59405E</color>
+    <color name="md_theme_tertiaryFixed_mediumContrast">#7F6484</color>
+    <color name="md_theme_tertiary_highContrast">#3A2440</color>
+    <color name="md_theme_tertiary_mediumContrast">#452E4A</color>
+    <color name="primaryClickedColor">#2A65B6</color>
+    <color name="primaryColor">#347ee4</color>
+    <color name="primaryDarkColor">#0069c0</color>
+    <color name="primaryDefaultColor">#347ee4</color>
+    <color name="primaryDisabledColor">#99B8D9</color>
+    <color name="primaryGreyColor">#EEEEEE</color>
+    <color name="primaryLightColor">#6ec6ff</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="rtk_theme_dark_background">#1B1B1F</color>
+    <color name="rtk_theme_dark_error">#FFB4AB</color>
+    <color name="rtk_theme_dark_errorContainer">#93000A</color>
+    <color name="rtk_theme_dark_inverseOnSurface">#303033</color>
+    <color name="rtk_theme_dark_inversePrimary">#005AC1</color>
+    <color name="rtk_theme_dark_inverseSurface">#E3E2E6</color>
+    <color name="rtk_theme_dark_onBackground">#E3E2E6</color>
+    <color name="rtk_theme_dark_onError">#690005</color>
+    <color name="rtk_theme_dark_onErrorContainer">#FFB4AB</color>
+    <color name="rtk_theme_dark_onPrimary">#002E69</color>
+    <color name="rtk_theme_dark_onPrimaryContainer">#D8E2FF</color>
+    <color name="rtk_theme_dark_onSecondary">#253048</color>
+    <color name="rtk_theme_dark_onSecondaryContainer">#D8E2FF</color>
+    <color name="rtk_theme_dark_onSurface">#E3E2E6</color>
+    <color name="rtk_theme_dark_onSurfaceVariant">#C4C6D0</color>
+    <color name="rtk_theme_dark_onTertiary">#44244A</color>
+    <color name="rtk_theme_dark_onTertiaryContainer">#FED6FF</color>
+    <color name="rtk_theme_dark_outline">#8E9099</color>
+    <color name="rtk_theme_dark_primary">#ADC6FF</color>
+    <color name="rtk_theme_dark_primaryContainer">#004494</color>
+    <color name="rtk_theme_dark_secondary">#BBC6E4</color>
+    <color name="rtk_theme_dark_secondaryContainer">#3B475F</color>
+    <color name="rtk_theme_dark_shadow">#000000</color>
+    <color name="rtk_theme_dark_surface">#1B1B1F</color>
+    <color name="rtk_theme_dark_surfaceTint">#ADC6FF</color>
+    <color name="rtk_theme_dark_surfaceTintColor">#ADC6FF</color>
+    <color name="rtk_theme_dark_surfaceVariant">#44474F</color>
+    <color name="rtk_theme_dark_tertiary">#E5B8E8</color>
+    <color name="rtk_theme_dark_tertiaryContainer">#5D3A62</color>
+    <color name="rtk_theme_light_background">#FEFBFF</color>
+    <color name="rtk_theme_light_error">#BA1A1A</color>
+    <color name="rtk_theme_light_errorContainer">#FFDAD6</color>
+    <color name="rtk_theme_light_inverseOnSurface">#F2F0F4</color>
+    <color name="rtk_theme_light_inversePrimary">#ADC6FF</color>
+    <color name="rtk_theme_light_inverseSurface">#303033</color>
+    <color name="rtk_theme_light_onBackground">#1B1B1F</color>
+    <color name="rtk_theme_light_onError">#FFFFFF</color>
+    <color name="rtk_theme_light_onErrorContainer">#410002</color>
+    <color name="rtk_theme_light_onPrimary">#FFFFFF</color>
+    <color name="rtk_theme_light_onPrimaryContainer">#001A41</color>
+    <color name="rtk_theme_light_onSecondary">#FFFFFF</color>
+    <color name="rtk_theme_light_onSecondaryContainer">#0F1B32</color>
+    <color name="rtk_theme_light_onSurface">#1B1B1F</color>
+    <color name="rtk_theme_light_onSurfaceVariant">#44474F</color>
+    <color name="rtk_theme_light_onTertiary">#FFFFFF</color>
+    <color name="rtk_theme_light_onTertiaryContainer">#2D0E34</color>
+    <color name="rtk_theme_light_outline">#74777F</color>
+    <color name="rtk_theme_light_primary">#005AC1</color>
+    <color name="rtk_theme_light_primaryContainer">#D8E2FF</color>
+    <color name="rtk_theme_light_secondary">#535E78</color>
+    <color name="rtk_theme_light_secondaryContainer">#D8E2FF</color>
+    <color name="rtk_theme_light_shadow">#000000</color>
+    <color name="rtk_theme_light_surface">#FEFBFF</color>
+    <color name="rtk_theme_light_surfaceTint">#005AC1</color>
+    <color name="rtk_theme_light_surfaceTintColor">#005AC1</color>
+    <color name="rtk_theme_light_surfaceVariant">#E1E2EC</color>
+    <color name="rtk_theme_light_tertiary">#76517B</color>
+    <color name="rtk_theme_light_tertiaryContainer">#FED6FF</color>
+    <color name="secondaryColortoolBarColor">#e91e63</color>
+    <color name="secondaryDarkColor">#b0003a</color>
+    <color name="secondaryGreyColor">#9E9E9E</color>
+    <color name="secondaryLightColor">#ff6090</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="seed">#4285F4</color>
+    <color name="statusBarColor">@color/primaryColor</color>
+    <color name="successful">#28A745</color>
+    <color name="toolBarColor">@color/primaryColor</color>
+    <color name="toolBarTextColor">@color/material_white</color>
+    <color name="transparent">#00000000</color>
+    <color name="warning">#FFC107</color>
+    <color name="windowBackground">#F4F5F9</color>
+    <dimen name="horizontal_page_margin">@dimen/margin_medium</dimen>
+    <dimen name="length_80dp">80dp</dimen>
+    <dimen name="margin_huge">64dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="rtk_avatar">40dp</dimen>
+    <dimen name="rtk_between_content_areas">8dp</dimen>
+    <dimen name="rtk_button_height">36dp</dimen>
+    <dimen name="rtk_icon">24dp</dimen>
+    <dimen name="rtk_listitem_two_column">72dp</dimen>
+    <dimen name="rtk_margin_horizontal">16dp</dimen>
+    <dimen name="rtk_margin_screen_edge_left_right">16dp</dimen>
+    <dimen name="rtk_status_bar">24dp</dimen>
+    <dimen name="rtk_text_size_appbar_medium">20sp</dimen>
+    <dimen name="rtk_text_size_button_medium">14sp</dimen>
+    <dimen name="rtk_toolbar">56dp</dimen>
+    <dimen name="rtk_touch_target">48dp</dimen>
+    <dimen name="rtk_touch_target_min_size">48dp</dimen>
+    <dimen name="rtkit_nav_header_height">176dp</dimen>
+    <dimen name="rtkit_nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="text_25dp">25dp</dimen>
+    <dimen name="vertical_page_margin">@dimen/margin_medium</dimen>
+    <string name="app_name">design</string>
+    <string name="cancel">Cancel</string>
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="ok">OK</string>
+    <string name="rtk_action_bt_scan_filter">Filter</string>
+    <string name="rtk_action_bt_unbond_alldevices">UnBond All Devices</string>
+    <string name="rtk_alert_no_download_view_find_please_download_one">Download application not found, please download a file browser by yourself!</string>
+    <string name="rtk_alert_no_filebrowser_message">File browser application has not been found on your device. Would you like to download one?</string>
+    <string name="rtk_alert_no_filebrowser_title">File Browser not found</string>
+    <string name="rtk_button_privacy_agree">Agree</string>
+    <string name="rtk_button_privacy_disagree">Disagree</string>
+    <string name="rtk_button_privacy_reject">Reject</string>
+    <string name="rtk_cancel">Cancel</string>
+    <string name="rtk_message_exit_app">Exit App?</string>
+    <string name="rtk_ok">OK</string>
+    <string name="rtk_pref_category_title_bt_scan_filter_device_name">Device Name</string>
+    <string name="rtk_pref_category_title_bt_scan_filter_rssi">RSSI</string>
+    <string name="rtk_pref_title_background_run">Background running</string>
+    <string name="rtk_pref_title_bt_scan_filter_addr">Mac Address</string>
+    <string name="rtk_pref_title_bt_scan_filter_connectable">Connectable</string>
+    <string name="rtk_pref_title_bt_scan_filter_name">Device Name</string>
+    <string name="rtk_pref_title_bt_scan_filter_name_fuzz_match">Fuzz Match</string>
+    <string name="rtk_pref_title_bt_scan_filter_name_nullable">Name Nullable</string>
+    <string name="rtk_pref_title_bt_scan_filter_rssi">RSSI Value(dBm)</string>
+    <string name="rtk_pref_title_bt_scan_filter_rssi_enabled">RSSI Filter</string>
+    <string name="rtk_pref_title_bt_scan_filter_service_uuid">Service UUID</string>
+    <string name="rtk_pref_title_bt_scan_filter_service_uuid_hogp">HOGP Service</string>
+    <string name="rtk_pref_title_bt_scan_filter_service_uuid_hogp_summary">00001812-0000-1000-8000-00805f9b34fb</string>
+    <string name="rtk_pref_title_bt_scan_filter_sort">Sort</string>
+    <string name="rtk_pref_title_bt_scan_mechanism">Scan Mechanism</string>
+    <string name="rtk_pref_title_bt_scan_mode">Scan Mode</string>
+    <string name="rtk_pref_title_category_quick_start">Quick Start</string>
+    <string name="rtk_pref_title_scan_filter">Scan Filter</string>
+    <string name="rtk_pref_title_upgrade">Auto check upgrade</string>
+    <string name="rtk_summaryOff">OFF</string>
+    <string name="rtk_summaryOn">ON</string>
+    <string name="rtk_summaryOn_upgrade">Auto check upgrade</string>
+    <string name="rtk_support_button_continue_scan">Continue Scan</string>
+    <string name="rtk_support_button_enable_location">Enable Location</string>
+    <string formatted="false" name="rtk_support_formated_log_time">%1$tR:%1$tS.%1$tL</string>
+    <string name="rtk_support_location_off_tip">Location is off!</string>
+    <string name="rtk_support_permission_button_set">Settings</string>
+    <string name="rtk_support_permission_storage_tip">Allow access external storage</string>
+    <string name="rtk_support_permission_storage_tip_30">Allow access to manager all files</string>
+    <string name="rtk_support_permission_subtitle_background_running">To avoid problems such as disconnection, it is recommended that you enable background running permissions for App.</string>
+    <string name="rtk_support_permission_subtitle_battery_optimize">In order to save power, the system may accidentally kill processes during use, and you need to add App to the battery protection list. </string>
+    <string name="rtk_support_permission_subtitle_location">Location</string>
+    <string name="rtk_support_permission_subtitle_notification">notification</string>
+    <string name="rtk_support_permission_subtitle_notiifcation">notification</string>
+    <string name="rtk_support_permission_subtitle_storage">Storage</string>
+    <string name="rtk_support_permission_title_background_running"> Permission to run in the background </string>
+    <string name="rtk_support_permission_title_battery_optimize"> Battery optimized whitelist </string>
+    <string name="rtk_support_permission_title_device_app_notification">Device &amp; app notification</string>
+    <string name="rtk_support_permission_title_location">Location</string>
+    <string name="rtk_support_permission_title_notification">App Notification</string>
+    <string name="rtk_support_permission_title_storage">Storage</string>
+    <string name="rtk_support_title_permission">Permission</string>
+    <string name="rtk_switchTextOff">OFF</string>
+    <string name="rtk_switchTextOn">ON</string>
+    <string name="rtk_text_help">Help</string>
+    <string name="rtk_text_privacy_not_show_again">Don\'t show again</string>
+    <string name="rtk_text_version">Version</string>
+    <string name="rtk_title_about">About</string>
+    <string name="rtk_title_bt_scan_filter">Scan Filter</string>
+    <string name="rtk_title_device_info">Device Info</string>
+    <string name="rtk_title_help">Help</string>
+    <string name="rtk_title_loading">Loading…</string>
+    <string name="rtk_title_privacy_policy">Privacy Policy</string>
+    <string name="rtk_title_privacy_user_agreement">User agreement</string>
+    <string name="rtk_title_settigns_developer_optoins">Developer Options</string>
+    <string name="rtk_title_settings">Settings</string>
+    <string name="rtk_title_support">Support</string>
+    <string name="rtk_title_user_agreement">User Agreement</string>
+    <string name="rtk_toast_app_conflict">It is detected that the conflict App has been installed on the phone. Package name is :%1$s, To ensure the stabiliby of use, please uninstall the App first</string>
+    <string name="rtkit_text_company">Realtek</string>
+    <string name="rtksdk_action_cancel">Cancel</string>
+    <string name="rtksdk_action_scan">Scan</string>
+    <string name="rtksdk_button_checkupdate">Version Update</string>
+    <string name="rtksdk_button_clear">Clear</string>
+    <string name="rtksdk_button_submit">Submit</string>
+    <string name="rtksdk_copyright">
+       Copyright © 2025 Realtek Semiconductor Corp.\nAll rights reserved.
+    </string>
+    <string name="rtksdk_device_bluetooth_address">Bluetooth Address: %1$s</string>
+    <string name="rtksdk_menu_scan_mode">Scan Mode</string>
+    <string name="rtksdk_permission_cancel">Cancel</string>
+    <string name="rtksdk_permission_denied">Permission Denied: %1$s</string>
+    <string name="rtksdk_permission_ok">Grant Permissions</string>
+    <string name="rtksdk_scan_mode_dual">DUAL</string>
+    <string name="rtksdk_scan_mode_gatt">GATT</string>
+    <string name="rtksdk_scan_mode_gatt_strict">GATT STRICT</string>
+    <string name="rtksdk_scan_mode_spp">SPP</string>
+    <string name="rtksdk_scan_mode_spp_strict">SPP STRICT</string>
+    <string name="rtksdk_scanner_empty">No device found</string>
+    <string name="rtksdk_scanner_settings">Scanner Settings</string>
+    <string name="rtksdk_scanner_subtitle_available_devices">Available Devices</string>
+    <string name="rtksdk_scanner_subtitle_bonded_devices">Bondeded Devices</string>
+    <string name="rtksdk_title_scanner">Scanner</string>
+    <string name="rtksdk_title_select_file">Select File</string>
+    <string name="rtksdk_toast_bt_enable">Bt is enabled!</string>
+    <string name="rtksdk_toast_bt_not_enable">Bt is disabled!</string>
+    <string name="rtksdk_usb_title_select_device">USB Devices</string>
+    <string name="unknown_device">Unknown Device</string>
+    <style name="ActionBar.SpinnerTitle" parent="@style/Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="ActionBar.TitleText" parent="TextAppearance.Material3.ActionBar.Title">
+        <item name="android:textColor">@color/toolBarTextColor</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="ActionBarPopupThemeOverlay" parent="ThemeOverlay.Material3.Light">
+        <item name="colorControlNormal">@color/actionBarDarkColor</item>
+    </style>
+    <style name="AwesomeToolBar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/toolBarColor</item>
+
+    </style>
+    <style name="DrawerDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#E5E5E5</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="DrawerItem">
+        <item name="android:textColor">@color/rtk_support_menu_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="FullScreenDialog" parent="Theme.Material3.DayNight.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="HeaderShadow">
+        <item name="android:foreground">@drawable/action_bar_shadow</item>
+        
+    </style>
+    <style name="ListItemView">
+        <item name="android:background">@color/md_theme_surface</item>
+    </style>
+    <style name="MySwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@android:color/transparent</item>
+        <item name="colorSwitchThumbNormal">@android:color/transparent</item>
+        <item name="android:colorForeground">@android:color/transparent</item>
+    </style>
+    <style name="RealtekSwitch" parent="Theme.AppCompat.Light">
+        
+        <item name="colorControlActivated">@color/material_indigo_500</item>
+        
+        <item name="colorSwitchThumbNormal">@color/material_pink_500</item>
+        
+        <item name="android:colorForeground">@color/material_grey_500</item>
+    </style>
+    <style name="RtkActionOverflowMenuStyle" parent="Widget.Material3.PopupMenu.Overflow">
+        
+        <item name="android:popupBackground">@color/md_theme_surface</item> 
+    </style>
+    <style name="RtkAlertDialogTheme" parent="Theme.Material3.DayNight.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/RtkNegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/RtkPositiveButtonStyle</item>
+    </style>
+    <style name="RtkAppTheme" parent="RtkTheme.Material"/>
+    <style name="RtkAppTheme.AppBarOverlay" parent="ThemeOverlay.Material3.Dark.ActionBar"/>
+    <style name="RtkAppTheme.NoActionBar" parent="RtkAppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="RtkAppTheme.PopupOverlay" parent="ThemeOverlay.Material3.Light"/>
+    <style name="RtkItemTextAppearance" parent="TextAppearance.Material3.BodySmall">
+        
+        <item name="android:textColor">@color/md_theme_onSurface</item> 
+        
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="RtkNegativeButtonStyle" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/material_red_500</item>
+    </style>
+    <style name="RtkPositiveButtonStyle" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+    <style name="RtkTheme.Material" parent="Theme.Material3.DayNight">
+
+        
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+
+        <item name="colorSecondaryVariant">@color/primaryDarkColor</item>
+        
+        
+
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="itemdecoration_line">@drawable/listdivider_horizontal</item>
+
+        <item name="switchStyle">@style/Widget.App.Switch</item>
+        <item name="android:statusBarColor" ns1:targetApi="lollipop">@color/statusBarColor</item>
+
+        
+        <item name="colorPrimary">@color/rtk_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/rtk_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/rtk_theme_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/rtk_theme_light_onPrimaryContainer</item>
+        
+        <item name="colorSecondary">@color/rtk_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/rtk_theme_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/rtk_theme_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/rtk_theme_light_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/rtk_theme_light_tertiary</item>
+        <item name="colorOnTertiary">@color/rtk_theme_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/rtk_theme_light_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/rtk_theme_light_onTertiaryContainer</item>
+        <item name="colorError">@color/rtk_theme_light_error</item>
+        <item name="colorOnError">@color/rtk_theme_light_onError</item>
+        <item name="colorErrorContainer">@color/rtk_theme_light_errorContainer</item>
+        <item name="colorOnErrorContainer">@color/rtk_theme_light_onErrorContainer</item>
+        <item name="android:colorBackground">@color/rtk_theme_light_background</item>
+        <item name="colorOnBackground">@color/rtk_theme_light_onBackground</item>
+        <item name="colorSurface">@color/rtk_theme_light_surface</item>
+        <item name="colorOnSurface">@color/rtk_theme_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/rtk_theme_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/rtk_theme_light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/rtk_theme_light_outline</item>
+        <item name="colorSurfaceInverse">@color/rtk_theme_light_inverseSurface</item>
+        <item name="colorOnSurfaceInverse">@color/rtk_theme_light_inverseOnSurface</item>
+        <item name="elevationOverlayColor">@color/rtk_theme_light_surfaceTint</item>
+        <item name="colorPrimaryInverse">@color/rtk_theme_light_inversePrimary</item>
+        <item name="alertDialogTheme">@style/RtkAlertDialogTheme</item>
+        <item name="android:yesNoPreferenceStyle">@style/RtkYesNoPreferenceStyle</item>
+
+        
+        <item name="actionOverflowMenuStyle">@style/RtkActionOverflowMenuStyle</item>
+
+        
+        <item name="android:itemTextAppearance">@style/RtkItemTextAppearance</item>
+    </style>
+    <style name="RtkTheme.Material.ActionBarThemeOverlay" parent="@style/ThemeOverlay.Material3.ActionBar">
+        <item name="android:textColorPrimary">#fff</item>
+        <item name="android:textColorSecondary">#8fff</item>
+        <item name="colorControlNormal">#fff</item>
+        <item name="colorControlHighlight">#3fff</item>
+    </style>
+    <style name="RtkTheme.Material.DayNight" parent="Theme.Material3.DayNight">
+
+        
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/primaryDarkColor</item>
+        
+        <item name="colorSecondary">@color/primaryColor</item>
+        <item name="colorSecondaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnSecondary">@color/primaryDarkColor</item>
+        
+        
+
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="itemdecoration_line">@drawable/listdivider_horizontal</item>
+
+        <item name="switchStyle">@style/Widget.App.Switch</item>
+
+        <item name="alertDialogTheme">@style/RtkAlertDialogTheme</item>
+        <item name="android:yesNoPreferenceStyle">@style/RtkYesNoPreferenceStyle</item>
+    </style>
+    <style name="RtkTheme.Material.DayNight.NoActionBar" parent="RtkTheme.Material.DayNight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="RtkTheme.Material.NoActionBar" parent="RtkTheme.Material">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="RtkYesNoPreferenceStyle" parent="Theme.Material3.DayNight.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/RtkNegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/RtkPositiveButtonStyle</item>
+    </style>
+    <style name="SeparatorLine">
+        <item name="android:background">#F4F5F9</item>
+    </style>
+    <style name="SeparatorLine.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+    </style>
+    <style name="ShapeAppearanceComponent.ExtraSmall" parent="">
+    <item name="cornerSize">0dp</item>
+  </style>
+    <style name="ShapeAppearanceComponent.LargeCornerSize" parent="">
+    <item name="cornerSize">16dp</item>
+
+  </style>
+    <style name="ShapeAppearanceComponent.MediumCornerSize" parent="">
+    <item name="cornerSize">8dp</item>
+  </style>
+    <style name="ShapeAppearanceComponent.SmallCornerSize" parent="">
+    <item name="cornerSize">4dp</item>
+  </style>
+    <style name="SwitchTxt" parent="Theme.AppCompat.Light">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="TextAppearance">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.Small">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="TextAppearance.Tab">
+        <item name="android:textSize">13sp</item>
+        
+    </style>
+    <style name="ThemeOverlay.App.Switch" parent="">
+        <item name="colorOnSurface">@color/material_green_900</item>
+        <item name="colorSecondary">@color/material_green_100</item>
+    </style>
+    <style name="ThemeOverlay.AppTheme.HighContrast" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_primary_highContrast</item>
+        <item name="colorOnPrimary">@color/md_theme_onPrimary_highContrast</item>
+        <item name="colorPrimaryContainer">@color/md_theme_primaryContainer_highContrast</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_onPrimaryContainer_highContrast</item>
+        <item name="colorSecondary">@color/md_theme_secondary_highContrast</item>
+        <item name="colorOnSecondary">@color/md_theme_onSecondary_highContrast</item>
+        <item name="colorSecondaryContainer">@color/md_theme_secondaryContainer_highContrast</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_onSecondaryContainer_highContrast</item>
+        <item name="colorTertiary">@color/md_theme_tertiary_highContrast</item>
+        <item name="colorOnTertiary">@color/md_theme_onTertiary_highContrast</item>
+        <item name="colorTertiaryContainer">@color/md_theme_tertiaryContainer_highContrast</item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_onTertiaryContainer_highContrast</item>
+        <item name="colorError">@color/md_theme_error_highContrast</item>
+        <item name="colorOnError">@color/md_theme_onError_highContrast</item>
+        <item name="colorErrorContainer">@color/md_theme_errorContainer_highContrast</item>
+        <item name="colorOnErrorContainer">@color/md_theme_onErrorContainer_highContrast</item>
+        <item name="android:colorBackground">@color/md_theme_background_highContrast</item>
+        <item name="colorOnBackground">@color/md_theme_onBackground_highContrast</item>
+        <item name="colorSurface">@color/md_theme_surface_highContrast</item>
+        <item name="colorOnSurface">@color/md_theme_onSurface_highContrast</item>
+        <item name="colorSurfaceVariant">@color/md_theme_surfaceVariant_highContrast</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_onSurfaceVariant_highContrast</item>
+        <item name="colorOutline">@color/md_theme_outline_highContrast</item>
+        <item name="colorOutlineVariant">@color/md_theme_outlineVariant_highContrast</item>
+        <item name="colorSurfaceInverse">@color/md_theme_inverseSurface_highContrast</item>
+        <item name="colorOnSurfaceInverse">@color/md_theme_inverseOnSurface_highContrast</item>
+        <item name="colorPrimaryInverse">@color/md_theme_inversePrimary_highContrast</item>
+        <item name="colorPrimaryFixed">@color/md_theme_primaryFixed_highContrast</item>
+        <item name="colorOnPrimaryFixed">@color/md_theme_onPrimaryFixed_highContrast</item>
+        <item name="colorPrimaryFixedDim">@color/md_theme_primaryFixedDim_highContrast</item>
+        <item name="colorOnPrimaryFixedVariant">@color/md_theme_onPrimaryFixedVariant_highContrast</item>
+        <item name="colorSecondaryFixed">@color/md_theme_secondaryFixed_highContrast</item>
+        <item name="colorOnSecondaryFixed">@color/md_theme_onSecondaryFixed_highContrast</item>
+        <item name="colorSecondaryFixedDim">@color/md_theme_secondaryFixedDim_highContrast</item>
+        <item name="colorOnSecondaryFixedVariant">@color/md_theme_onSecondaryFixedVariant_highContrast</item>
+        <item name="colorTertiaryFixed">@color/md_theme_tertiaryFixed_highContrast</item>
+        <item name="colorOnTertiaryFixed">@color/md_theme_onTertiaryFixed_highContrast</item>
+        <item name="colorTertiaryFixedDim">@color/md_theme_tertiaryFixedDim_highContrast</item>
+        <item name="colorOnTertiaryFixedVariant">@color/md_theme_onTertiaryFixedVariant_highContrast</item>
+        <item name="colorSurfaceDim">@color/md_theme_surfaceDim_highContrast</item>
+        <item name="colorSurfaceBright">@color/md_theme_surfaceBright_highContrast</item>
+        <item name="colorSurfaceContainerLowest">@color/md_theme_surfaceContainerLowest_highContrast</item>
+        <item name="colorSurfaceContainerLow">@color/md_theme_surfaceContainerLow_highContrast</item>
+        <item name="colorSurfaceContainer">@color/md_theme_surfaceContainer_highContrast</item>
+        <item name="colorSurfaceContainerHigh">@color/md_theme_surfaceContainerHigh_highContrast</item>
+        <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest_highContrast</item>
+    </style>
+    <style name="ThemeOverlay.AppTheme.MediumContrast" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_primary_mediumContrast</item>
+        <item name="colorOnPrimary">@color/md_theme_onPrimary_mediumContrast</item>
+        <item name="colorPrimaryContainer">@color/md_theme_primaryContainer_mediumContrast</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_onPrimaryContainer_mediumContrast</item>
+        <item name="colorSecondary">@color/md_theme_secondary_mediumContrast</item>
+        <item name="colorOnSecondary">@color/md_theme_onSecondary_mediumContrast</item>
+        <item name="colorSecondaryContainer">@color/md_theme_secondaryContainer_mediumContrast</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_onSecondaryContainer_mediumContrast</item>
+        <item name="colorTertiary">@color/md_theme_tertiary_mediumContrast</item>
+        <item name="colorOnTertiary">@color/md_theme_onTertiary_mediumContrast</item>
+        <item name="colorTertiaryContainer">@color/md_theme_tertiaryContainer_mediumContrast</item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_onTertiaryContainer_mediumContrast</item>
+        <item name="colorError">@color/md_theme_error_mediumContrast</item>
+        <item name="colorOnError">@color/md_theme_onError_mediumContrast</item>
+        <item name="colorErrorContainer">@color/md_theme_errorContainer_mediumContrast</item>
+        <item name="colorOnErrorContainer">@color/md_theme_onErrorContainer_mediumContrast</item>
+        <item name="android:colorBackground">@color/md_theme_background_mediumContrast</item>
+        <item name="colorOnBackground">@color/md_theme_onBackground_mediumContrast</item>
+        <item name="colorSurface">@color/md_theme_surface_mediumContrast</item>
+        <item name="colorOnSurface">@color/md_theme_onSurface_mediumContrast</item>
+        <item name="colorSurfaceVariant">@color/md_theme_surfaceVariant_mediumContrast</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_onSurfaceVariant_mediumContrast</item>
+        <item name="colorOutline">@color/md_theme_outline_mediumContrast</item>
+        <item name="colorOutlineVariant">@color/md_theme_outlineVariant_mediumContrast</item>
+        <item name="colorSurfaceInverse">@color/md_theme_inverseSurface_mediumContrast</item>
+        <item name="colorOnSurfaceInverse">@color/md_theme_inverseOnSurface_mediumContrast</item>
+        <item name="colorPrimaryInverse">@color/md_theme_inversePrimary_mediumContrast</item>
+        <item name="colorPrimaryFixed">@color/md_theme_primaryFixed_mediumContrast</item>
+        <item name="colorOnPrimaryFixed">@color/md_theme_onPrimaryFixed_mediumContrast</item>
+        <item name="colorPrimaryFixedDim">@color/md_theme_primaryFixedDim_mediumContrast</item>
+        <item name="colorOnPrimaryFixedVariant">@color/md_theme_onPrimaryFixedVariant_mediumContrast</item>
+        <item name="colorSecondaryFixed">@color/md_theme_secondaryFixed_mediumContrast</item>
+        <item name="colorOnSecondaryFixed">@color/md_theme_onSecondaryFixed_mediumContrast</item>
+        <item name="colorSecondaryFixedDim">@color/md_theme_secondaryFixedDim_mediumContrast</item>
+        <item name="colorOnSecondaryFixedVariant">@color/md_theme_onSecondaryFixedVariant_mediumContrast</item>
+        <item name="colorTertiaryFixed">@color/md_theme_tertiaryFixed_mediumContrast</item>
+        <item name="colorOnTertiaryFixed">@color/md_theme_onTertiaryFixed_mediumContrast</item>
+        <item name="colorTertiaryFixedDim">@color/md_theme_tertiaryFixedDim_mediumContrast</item>
+        <item name="colorOnTertiaryFixedVariant">@color/md_theme_onTertiaryFixedVariant_mediumContrast</item>
+        <item name="colorSurfaceDim">@color/md_theme_surfaceDim_mediumContrast</item>
+        <item name="colorSurfaceBright">@color/md_theme_surfaceBright_mediumContrast</item>
+        <item name="colorSurfaceContainerLowest">@color/md_theme_surfaceContainerLowest_mediumContrast</item>
+        <item name="colorSurfaceContainerLow">@color/md_theme_surfaceContainerLow_mediumContrast</item>
+        <item name="colorSurfaceContainer">@color/md_theme_surfaceContainer_mediumContrast</item>
+        <item name="colorSurfaceContainerHigh">@color/md_theme_surfaceContainerHigh_mediumContrast</item>
+        <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest_mediumContrast</item>
+    </style>
+    <style name="ThemeOverlay.PrimaryPalette.Blue" parent="">
+    <item name="colorPrimary">#1b87e5</item>
+    <item name="colorPrimaryDark">#005bb2</item>
+  </style>
+    <style name="ThemeOverlay.PrimaryPalette.BlueGrey" parent="">
+    <item name="colorPrimary">#546e7a</item>
+    <item name="colorPrimaryDark">#29434e</item>
+  </style>
+    <style name="ThemeOverlay.PrimaryPalette.Brown" parent="">
+    <item name="colorPrimary">#6d4c41</item>
+    <item name="colorPrimaryDark">#40241a</item>
+  </style>
+    <style name="ThemeOverlay.PrimaryPalette.Green" parent="">
+    <item name="colorPrimary">#43a047</item>
+    <item name="colorPrimaryDark">#00701a</item>
+  </style>
+    <style name="ThemeOverlay.PrimaryPalette.Grey" parent="">
+    <item name="colorPrimary">#757575</item>
+    <item name="colorPrimaryDark">#494949</item>
+  </style>
+    <style name="ThemeOverlay.PrimaryPalette.Indigo" parent="">
+    <item name="colorPrimary">#3949ab</item>
+    <item name="colorPrimaryDark">#00227b</item>
+  </style>
+    <style name="ThemeOverlay.PrimaryPalette.Orange" parent="">
+    <item name="colorPrimary">#fb8c00</item>
+    <item name="colorPrimaryDark">#c25e00</item>
+  </style>
+    <style name="ThemeOverlay.PrimaryPalette.Purple" parent="">
+    <item name="colorPrimary">#8e24aa</item>
+    <item name="colorPrimaryDark">#5c007a</item>
+  </style>
+    <style name="ThemeOverlay.PrimaryPalette.Red" parent="">
+    <item name="colorPrimary">#e53935</item>
+    <item name="colorPrimaryDark">#ab000d</item>
+  </style>
+    <style name="ThemeOverlay.PrimaryPalette.Yellow" parent="">
+    <item name="colorPrimary">#fdd835</item>
+    <item name="colorPrimaryDark">#c6a700</item>
+  </style>
+    <style name="ThemeOverlay.SecondaryPalette.Blue" parent="">
+    <item name="colorSecondary">#1b87e5</item>
+  </style>
+    <style name="ThemeOverlay.SecondaryPalette.BlueGrey" parent="">
+    <item name="colorSecondary">#546e7a</item>
+  </style>
+    <style name="ThemeOverlay.SecondaryPalette.Brown" parent="">
+    <item name="colorSecondary">#6d4c41</item>
+  </style>
+    <style name="ThemeOverlay.SecondaryPalette.Green" parent="">
+    <item name="colorSecondary">#43a047</item>
+  </style>
+    <style name="ThemeOverlay.SecondaryPalette.Grey" parent="">
+    <item name="colorSecondary">#757575</item>
+  </style>
+    <style name="ThemeOverlay.SecondaryPalette.Indigo" parent="">
+    <item name="colorSecondary">#3949ab</item>
+  </style>
+    <style name="ThemeOverlay.SecondaryPalette.Orange" parent="">
+    <item name="colorSecondary">#fb8c00</item>
+  </style>
+    <style name="ThemeOverlay.SecondaryPalette.Purple" parent="">
+    <item name="colorSecondary">#8e24aa</item>
+  </style>
+    <style name="ThemeOverlay.SecondaryPalette.Red" parent="">
+    <item name="colorSecondary">#e53935</item>
+  </style>
+    <style name="ThemeOverlay.SecondaryPalette.Yellow" parent="">
+    <item name="colorSecondary">#fdd835</item>
+  </style>
+    <style name="ThemeOverlay.ShapeSize.Large" parent="">
+    <item name="shapeAppearanceSmallComponent">@style/ShapeAppearanceComponent.LargeCornerSize</item>
+    <item name="shapeAppearanceMediumComponent">@style/ShapeAppearanceComponent.LargeCornerSize</item>
+    <item name="shapeAppearanceLargeComponent">@style/ShapeAppearanceComponent.MediumCornerSize</item>
+  </style>
+    <style name="ThemeOverlay.ShapeSize.Medium" parent="">
+    <item name="shapeAppearanceSmallComponent">@style/ShapeAppearanceComponent.MediumCornerSize</item>
+    <item name="shapeAppearanceMediumComponent">@style/ShapeAppearanceComponent.MediumCornerSize</item>
+    <item name="shapeAppearanceLargeComponent">@style/ShapeAppearanceComponent.SmallCornerSize</item>
+  </style>
+    <style name="ThemeOverlay.ShapeSize.Small" parent="">
+    <item name="shapeAppearanceSmallComponent">@style/ShapeAppearanceComponent.SmallCornerSize</item>
+    <item name="shapeAppearanceMediumComponent">@style/ShapeAppearanceComponent.SmallCornerSize</item>
+    <item name="shapeAppearanceLargeComponent">@style/ShapeAppearanceComponent.ExtraSmall</item>
+  </style>
+    <style name="ThemeOverlay.Shapes.Cut" parent="">
+    <item name="cornerFamily">cut</item>
+  </style>
+    <style name="ThemeOverlay.Shapes.Rounded" parent="">
+    <item name="cornerFamily">rounded</item>
+  </style>
+    <style name="TransprentDialogTheme" parent="Theme.Material3.DayNight.Dialog">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="Widget"/>
+    <style name="Widget.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/actionBarColor</item>
+        <item name="android:backgroundStacked">@color/actionBarColor</item>
+        <item name="android:backgroundSplit">@color/actionBarColor</item>
+        <item name="android:displayOptions">useLogo|showHome|showTitle</item>
+    </style>
+    <style name="Widget.ActionBar.Overflow" parent="@android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_menu_moreoverflow</item>
+    </style>
+    <style name="Widget.App.Switch" parent="Widget.Material3.CompoundButton.Switch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Switch</item>
+    </style>
+    <style name="Widget.Button" parent="@android:style/Widget.Holo.Light.Button">
+        <item name="android:minWidth">160dip</item>
+    </style>
+    <style name="Widget.ListTitle">
+        <item name="android:background">@color/headerBackgroundColor</item>
+        <item name="android:textColor">@color/headerTextColor</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="Widget.ScannerSubtitle">
+        <item name="android:textColor">@color/headerTextColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Widget.Subtitle">
+        <item name="android:textColor">@color/headerTextColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="switch.txt" parent="Theme.AppCompat.Light">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <declare-styleable name="AdvVeriticalSeekBar">
+        <attr name="minValue"/>
+        <attr name="maxValue"/>
+        <attr name="progressMulti"/>
+        <attr name="topText"/>
+        <attr name="topTextVisible"/>
+        <attr name="bottomTextVisible"/>
+        <attr name="bottomTextScale"/>
+    </declare-styleable>
+    <declare-styleable name="SettingsItem">
+        <attr name="text"/>
+        <attr name="textColor"/>
+        <attr name="textSize"/>
+        <attr name="secondText"/>
+        <attr name="secondTextColor"/>
+        <attr name="secondTextSize"/>
+        <attr name="secondTextVisible"/>
+        <attr name="subText"/>
+        <attr name="subTextColor"/>
+        <attr name="subTextSize"/>
+        <attr name="subTextGravity"/>
+        <attr name="subTextMaxLines"/>
+        <attr name="subTextVisible"/>
+        <attr name="bottomText"/>
+        <attr name="bottomTextColor"/>
+        <attr name="bottomTextSize"/>
+        <attr name="bottomTextVisible"/>
+        <attr name="isArrowVisible"/>
+        <attr name="visibility"/>
+        <attr name="arrowSrc"/>
+        <attr name="isLogoVisible"/>
+        <attr name="src"/>
+        <attr name="rtk_position"/>
+    </declare-styleable>
+    <declare-styleable name="VerticalSeekBar">
+        <attr name="seekBarRotation">
+            <!-- Clock wise - 90 deg; top = min, bottom = max -->
+            <enum name="CW90" value="90"/>
+            <!-- Clock wise - 270 deg; bottom = min, top = max -->
+            <enum name="CW270" value="270"/>
+        </attr>
+    </declare-styleable>
+</resources>

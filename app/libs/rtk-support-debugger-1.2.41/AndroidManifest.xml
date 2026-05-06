@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022. Realtek Corporation.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~         http://www.apache.org/licenses/LICENSE-2.0
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.realtek.sdk.support.debugger" >
+
+    <uses-sdk android:minSdkVersion="19" />
+    <!-- 9.0 -->
+    <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> -->
+    <!-- <uses-permission -->
+    <!-- android:name="android.permission.WRITE_EXTERNAL_STORAGE" -->
+    <!-- tools:ignore="ScopedStorage" /> -->
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
+    <!-- <uses-permission -->
+    <!-- android:name="android.permission.MANAGE_EXTERNAL_STORAGE" -->
+    <!-- android:minSdkVersion="30" -->
+    <!-- tools:ignore="ScopedStorage" /> -->
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true" >
+        <activity
+            android:name="com.realtek.sdk.support.debugger.DebuggerSettingsActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|locale|layoutDirection"
+            android:exported="true"
+            android:label="@string/rtk_support_debugger_title_settings"
+            android:screenOrientation="sensor" >
+            <intent-filter android:priority="1" >
+                <action android:name="rtk.action.settings.APPLICATION_DEBUGGER_SETTINGS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.realtek.sdk.support.debugger.settings.DeveloperOptionsDashboardActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|locale|layoutDirection"
+            android:exported="true"
+            android:label="@string/rtk_support_debugger_title_development_settings"
+            android:screenOrientation="sensor" >
+            <intent-filter android:priority="1" >
+
+                <!-- android.content.ActivityNotFoundException: No Activity found to handle Intent { act=rtk.settings.DEVELOPMENT_SETTINGS } -->
+                <action android:name="rtk.action.settings.APPLICATION_DEVELOPMENT_SETTINGS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.realtek.sdk.support.debugger.ui.AboutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|locale|layoutDirection"
+            android:exported="true" >
+        </activity>
+    </application>
+
+</manifest>

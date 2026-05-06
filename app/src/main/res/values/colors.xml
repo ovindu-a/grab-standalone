@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background: dark navy-purple matching the image -->
+    <color name="bg_dark">#1E1C2E</color>
+    <!-- Slightly lighter surface for cards -->
+    <color name="surface">#272440</color>
+    <!-- Accent: medium purple from the rounded shape in the image -->
+    <color name="accent_purple">#6B62A8</color>
+    <!-- Pressed/darker accent -->
+    <color name="accent_purple_dark">#574F8E</color>
+    <!-- Text -->
+    <color name="text_primary">#EDE9FF</color>
+    <color name="text_muted">#8C88AC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

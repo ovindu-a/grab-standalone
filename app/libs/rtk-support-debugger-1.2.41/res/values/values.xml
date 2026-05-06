@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="rtk_debug_level_entries">
+        <item>VERBOSE</item>
+        <item>DEBUG</item>
+        <item>INFO</item>
+        <item>WARN</item>
+        <item>ERROR</item>
+    </string-array>
+    <string-array name="rtk_debug_level_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <color name="accentColor">#FF4081</color>
+    <color name="actionBarColorDark">#0081B7</color>
+    <color name="actionBarDarkColor">#0081B7</color>
+    <color name="dividerColor">#BBBDC0</color>
+    <color name="guide_overlay">#e2353535</color>
+    <color name="headerBackgroundColor">#009ada</color>
+    <color name="headerTextColor">#009ada</color>
+    <color name="primaryColor">#347ee4</color>
+    <color name="primaryDarkColor">#0069c0</color>
+    <color name="primaryGreyColor">#EEEEEE</color>
+    <color name="primaryLightColor">#6ec6ff</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryColortoolBarColor">#e91e63</color>
+    <color name="secondaryDarkColor">#b0003a</color>
+    <color name="secondaryGreyColor">#9E9E9E</color>
+    <color name="secondaryLightColor">#ff6090</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="statusBarColor">@color/primaryColor</color>
+    <color name="toolBarColor">@color/primaryColor</color>
+    <color name="windowBackground">#F4F5F9</color>
+    <string name="rtk_about_text_company">Company</string>
+    <string name="rtk_dfu_quality_hint_certification">Please input certification code</string>
+    <string name="rtk_pref_category_title_general">General</string>
+    <string name="rtk_pref_category_title_log">Log</string>
+    <string name="rtk_pref_summary_clear_log">Clear cache log files</string>
+    <string name="rtk_pref_title_category_sys_settings">System</string>
+    <string name="rtk_pref_title_clear_log">Clear log</string>
+    <string name="rtk_pref_title_debug">DEBUG</string>
+    <string name="rtk_pref_title_debug_level">Debug Level</string>
+    <string name="rtk_pref_title_debug_summary_off">Nomal Mode</string>
+    <string name="rtk_pref_title_debug_summary_on">Debug Mode, read log data</string>
+    <string name="rtk_pref_title_developer_options_summary">Open Developer Options</string>
+    <string name="rtk_pref_title_developer_optoins">Developer Options</string>
+    <string name="rtk_pref_title_device_info">Device Info</string>
+    <string name="rtk_pref_title_device_info_summary">Open Device Info</string>
+    <string name="rtk_pref_title_dump_hci">Dump HCI</string>
+    <string name="rtk_pref_title_dump_hci_summary">/DevAssistant/btsnoop/</string>
+    <string name="rtk_pref_title_log">Auto clear log</string>
+    <string name="rtk_pref_title_log_2_file">Log2File</string>
+    <string name="rtk_pref_title_log_2_file_summary_off"> </string>
+    <string name="rtk_pref_title_log_2_file_summary_on">Save Log 2 File</string>
+    <string name="rtk_pref_title_log_level">Log Level</string>
+    <string name="rtk_pref_title_log_retention_days">Retention Days</string>
+    <string name="rtk_pref_title_sys_debugger_settings">Application Debugger Settings</string>
+    <string name="rtk_pref_title_sys_settings_bluetooth">Bluetooth</string>
+    <string name="rtk_pref_title_sys_settings_bluetooth_summary">Open System Settings Bluetooth</string>
+    <string name="rtk_pref_title_sys_settings_location">Location</string>
+    <string name="rtk_pref_title_sys_settings_location_summary">Open System Settings Location</string>
+    <string name="rtk_summaryOn_log">save latest days </string>
+    <string name="rtk_support_debugger_legacy_storage_info">Legacy External Storage: %1$s</string>
+    <string name="rtk_support_debugger_open_storage_settings">Open Storage settings</string>
+    <string name="rtk_support_debugger_permission_granted_info">Permission granted: %1$s</string>
+    <string name="rtk_support_debugger_permission_used_info">Permission used: %1$s</string>
+    <string name="rtk_support_debugger_request_storage_permission">Request Storage permission</string>
+    <string name="rtk_support_debugger_sdk_codename_info">SDK codename: %1$s</string>
+    <string name="rtk_support_debugger_sdk_version_info">SDK version: %1$s</string>
+    <string name="rtk_support_debugger_title_certification">Certification</string>
+    <string name="rtk_support_debugger_title_development_settings">Development Settings</string>
+    <string name="rtk_support_debugger_title_settings">Debugger Settings</string>
+    <string name="rtk_td_dependence_lib_item"><![CDATA[<tr><td><font color=#0081B7>%1$s:%2$s</font></td><td><font color=#000000>:%3$s</font></td></tr>]]></string>
+    <string name="rtk_td_device_info_item"><![CDATA[<tr><td><font color=#0081B7>%1$s</font></td>%2$s<td><font color=#000000>%3$s</font></td></tr>]]></string>
+    <string name="rtk_td_device_info_item_warn"><![CDATA[<tr><td><font color=#0081B7>%1$s</font></td>%2$s<td><font color=#FF4081>%3$s</font></td></tr>]]></string>
+    <string name="rtk_text_device_certification_state_fail">Uncertified</string>
+    <string name="rtk_text_device_certification_state_ok">Certified</string>
+    <string name="rtk_text_label_device_certification">Device Certification</string>
+    <string name="rtk_text_use_developer_optoins">Use developer options</string>
+    <string name="rtk_title_dependences_library">Dependences Library</string>
+    <string name="rtk_title_device_info">Device Info</string>
+    <string name="rtk_title_settigns_developer_optoins">Developer Options</string>
+    <string name="rtk_toast_developer_options_ok">You are now in developer mode</string>
+    <string name="rtk_toast_developer_optoins">You are now %1$d Steps array from being a developer</string>
+    <string name="rtkit_text_app_detail_info">App Detail Info</string>
+    <string name="toast_certification_code_error">Certification code error!!</string>
+</resources>

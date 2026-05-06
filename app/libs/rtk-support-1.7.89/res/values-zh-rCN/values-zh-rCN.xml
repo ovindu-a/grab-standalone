@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="rtk_app_file_browser">
+        <item>ES 文件浏览器</item>
+        <item>文件浏览器</item>
+        <item>RE 文件浏览器</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="rtk_app_file_browser_action">
+        <item>market://details?id=com.estrongs.android.pop</item>
+        <item>market://details?id=com.rhmsoft.fm</item>
+        <item>market://details?id=com.speedsoftware.rootexplorer</item>
+        <item>market://search?q=file manager</item>
+    </string-array>
+    <string-array name="rtk_pref_bt_scan_mechanism_entries">
+        <item>全部</item>
+        <item>单设备</item>
+    </string-array>
+    <string-array name="rtk_pref_bt_scan_mode_entries">
+        <item>DUAL</item>
+        <item>BLE</item>
+        <item>BLE ONLY</item>
+        <item>BR/EDR</item>
+        <item>BR/EDR ONLY</item>
+    </string-array>
+    <string name="cancel">取消</string>
+    <string name="menu_scan">搜索</string>
+    <string name="menu_stop">停止</string>
+    <string name="ok">确定</string>
+    <string name="rtk_action_bt_scan_filter">过滤</string>
+    <string name="rtk_action_bt_unbond_alldevices">解除已配对设备</string>
+    <string name="rtk_alert_no_download_view_find_please_download_one">下载应用未找到，请自行下载一个文件浏览器</string>
+    <string name="rtk_alert_no_filebrowser_message">未找到文件浏览器，请自行下载一个文件浏览器</string>
+    <string name="rtk_alert_no_filebrowser_title">未找到文件浏览器</string>
+    <string name="rtk_button_privacy_agree">同意</string>
+    <string name="rtk_button_privacy_disagree">拒绝</string>
+    <string name="rtk_button_privacy_reject">拒绝</string>
+    <string name="rtk_cancel">取消</string>
+    <string name="rtk_message_exit_app">确认退出应用?</string>
+    <string name="rtk_ok">确定</string>
+    <string name="rtk_pref_category_title_bt_scan_filter_device_name">设备名称</string>
+    <string name="rtk_pref_title_background_run">后台运行</string>
+    <string name="rtk_pref_title_bt_scan_filter_addr">蓝牙地址</string>
+    <string name="rtk_pref_title_bt_scan_filter_connectable">可连接</string>
+    <string name="rtk_pref_title_bt_scan_filter_name">设备名称</string>
+    <string name="rtk_pref_title_bt_scan_filter_name_fuzz_match">模糊搜索</string>
+    <string name="rtk_pref_title_bt_scan_filter_name_nullable">无名称设备</string>
+    <string name="rtk_pref_title_bt_scan_filter_rssi">线损值（默认取绝对值）</string>
+    <string name="rtk_pref_title_bt_scan_filter_service_uuid">服务 UUID</string>
+    <string name="rtk_pref_title_bt_scan_filter_service_uuid_hogp">HOGP 服务</string>
+    <string name="rtk_pref_title_bt_scan_mechanism">搜索机制</string>
+    <string name="rtk_pref_title_bt_scan_mode">搜索模式</string>
+    <string name="rtk_pref_title_category_quick_start">快速开始</string>
+    <string name="rtk_pref_title_scan_filter">搜索过滤</string>
+    <string name="rtk_pref_title_upgrade">自动检查版本更新</string>
+    <string name="rtk_summaryOff">关闭</string>
+    <string name="rtk_summaryOn">打开</string>
+    <string name="rtk_summaryOn_upgrade">自动检查升级</string>
+    <string name="rtk_support_location_off_tip">定位已关闭</string>
+    <string name="rtk_support_permission_button_set">设置</string>
+    <string name="rtk_support_permission_subtitle_background_running">为避免连接断开等问题，建议您为应用开启后台运行权限</string>
+    <string name="rtk_support_permission_subtitle_battery_optimize">系统为了省电，可能会在使用中误杀进程，需要您将应用加入电池保护名单中。</string>
+    <string name="rtk_support_permission_subtitle_location">定位</string>
+    <string name="rtk_support_permission_subtitle_notiifcation">通知</string>
+    <string name="rtk_support_permission_title_background_running">后台运行权限</string>
+    <string name="rtk_support_permission_title_battery_optimize">电池优化白名单</string>
+    <string name="rtk_support_permission_title_location">定位</string>
+    <string name="rtk_support_permission_title_notification">通知</string>
+    <string name="rtk_support_title_permission">权限管理</string>
+    <string name="rtk_switchTextOff">关闭</string>
+    <string name="rtk_switchTextOn">打开</string>
+    <string name="rtk_text_help">帮助</string>
+    <string name="rtk_text_version">版本</string>
+    <string name="rtk_title_about">关于</string>
+    <string name="rtk_title_bt_scan_filter">搜索过滤</string>
+    <string name="rtk_title_device_info">设备信息</string>
+    <string name="rtk_title_help">帮助</string>
+    <string name="rtk_title_loading">加载中…</string>
+    <string name="rtk_title_privacy_policy">隐私政策</string>
+    <string name="rtk_title_privacy_user_agreement">用户协议</string>
+    <string name="rtk_title_settigns_developer_optoins">开发者选项</string>
+    <string name="rtk_title_settings">设置</string>
+    <string name="rtk_title_support">支持</string>
+    <string name="rtk_title_user_agreement">用户服务协议</string>
+    <string name="rtk_toast_app_conflict">检测到冲突应用，包名:%1$s, 为保证使用稳定性，请先卸载App</string>
+    <string name="rtksdk_action_cancel">取消</string>
+    <string name="rtksdk_action_scan">搜索</string>
+    <string name="rtksdk_button_checkupdate">检查更新</string>
+    <string name="rtksdk_button_clear">清空</string>
+    <string name="rtksdk_button_submit">提交</string>
+    <string name="rtksdk_copyright">
+       版权所有 ©2025 Realtek Semiconductor Corp.\n保留所有权利.
+    </string>
+    <string name="rtksdk_device_bluetooth_address">蓝牙地址: %1$s</string>
+    <string name="rtksdk_menu_scan_mode">搜索模式</string>
+    <string name="rtksdk_permission_cancel">残忍拒绝</string>
+    <string name="rtksdk_permission_denied">权限不足: %1$s</string>
+    <string name="rtksdk_permission_ok">立刻开启</string>
+    <string name="rtksdk_scanner_empty">未搜索到设备</string>
+    <string name="rtksdk_scanner_subtitle_available_devices">可使用设备</string>
+    <string name="rtksdk_scanner_subtitle_bonded_devices">已绑定设备</string>
+    <string name="rtksdk_title_scanner">选择设备</string>
+    <string name="rtksdk_title_select_file">选择文件</string>
+    <string name="rtksdk_toast_bt_enable">蓝牙已打开</string>
+    <string name="rtksdk_toast_bt_not_enable">蓝牙未开启</string>
+    <string name="rtksdk_usb_title_select_device">USB 设备</string>
+    <string name="unknown_device">未知设备</string>
+</resources>

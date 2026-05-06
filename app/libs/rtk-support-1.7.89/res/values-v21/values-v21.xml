@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AwesomeToolBar" parent="Widget.Material3.Toolbar">
+        <item name="android:background">@color/toolBarColor</item>
+
+        <item name="android:popupTheme">@style/ActionBarPopupThemeOverlay</item>
+        <item name="android:titleTextAppearance">@style/ActionBar.TitleText</item>
+    </style>
+    <style name="RtkActionOverflowMenuStyle" parent="Widget.Material3.PopupMenu.Overflow">
+        
+        <item name="android:popupBackground">@color/md_theme_surface</item> 
+        
+        <item name="android:popupElevation">8dp</item> 
+    </style>
+</resources>

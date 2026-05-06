@@ -1,0 +1,4 @@
+-keep class com.realsil.sdk.audioconnect.smartwear.** { *;}
+-keep class com.realsil.sdk.audioconnect.ai.** { *;}
+-dontwarn com.realsil.sdk.audioconnect.smartwear.**
+-dontwarn com.realsil.sdk.audioconnect.ai.**

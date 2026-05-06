@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2022. Realtek Corporation.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~         http://www.apache.org/licenses/LICENSE-2.0
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:key="development_preference_screen"
+    android:title="@string/rtk_pref_title_scan_filter">
+
+    <com.realsil.sdk.support.settings.RtkListPreference
+        android:entries="@array/rtk_pref_bt_scan_mechanism_entries"
+        android:entryValues="@array/rtk_pref_bt_scan_mechanism_values"
+        android:key="rtk_list_bt_scan_mechanism"
+        android:summary="{v}"
+        android:title="@string/rtk_pref_title_bt_scan_mechanism"
+        app:iconSpaceReserved="false" />
+
+    <androidx.preference.SwitchPreference
+        android:key="rtk_switch_bt_scan_filter_connectable"
+        android:summary="是否打开我呢？"
+        android:summaryOff="@string/rtk_summaryOff"
+        android:summaryOn="@string/rtk_summaryOn"
+        android:switchTextOff="@string/rtk_switchTextOff"
+        android:switchTextOn="@string/rtk_switchTextOn"
+        android:title="@string/rtk_pref_title_bt_scan_filter_connectable"
+        app:iconSpaceReserved="false" />
+
+
+    <androidx.preference.EditTextPreference
+        android:dialogTitle="@string/rtk_pref_title_bt_scan_filter_addr"
+        android:digits="0123456789:abcdefABCDEF"
+        android:inputType="text"
+        android:key="rtk_edittext_bt_scan_filter_address"
+        android:summary="{v}"
+        android:title="@string/rtk_pref_title_bt_scan_filter_addr"
+        app:iconSpaceReserved="false" />
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        android:title="@string/rtk_pref_category_title_bt_scan_filter_device_name">
+
+        <androidx.preference.SwitchPreference
+            android:key="rtk_switch_bt_scan_filter_name_nullable"
+            android:summary="是否打开我呢？"
+            android:summaryOff="@string/rtk_summaryOff"
+            android:summaryOn="@string/rtk_summaryOn"
+            android:switchTextOff="@string/rtk_switchTextOff"
+            android:switchTextOn="@string/rtk_switchTextOn"
+            android:title="@string/rtk_pref_title_bt_scan_filter_name_nullable"
+            app:iconSpaceReserved="false" />
+
+        <androidx.preference.EditTextPreference
+            android:dialogTitle="@string/rtk_pref_title_bt_scan_filter_name"
+            android:inputType="text"
+            android:key="rtk_edittext_bt_scan_filter_name"
+            android:summary="{v}"
+            android:title="@string/rtk_pref_title_bt_scan_filter_name"
+            app:iconSpaceReserved="false" />
+
+        <androidx.preference.SwitchPreference
+            android:key="rtk_switch_bt_scan_filter_name_fuzz_match"
+            android:summary="是否打开我呢？"
+            android:summaryOff="@string/rtk_summaryOff"
+            android:summaryOn="@string/rtk_summaryOn"
+            android:switchTextOff="@string/rtk_switchTextOff"
+            android:switchTextOn="@string/rtk_switchTextOn"
+            android:title="@string/rtk_pref_title_bt_scan_filter_name_fuzz_match"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>
