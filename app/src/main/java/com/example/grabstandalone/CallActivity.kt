@@ -7,6 +7,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.grabstandalone.databinding.ActivityCallBinding
@@ -15,6 +16,7 @@ class CallActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCallBinding
 
+    private val GRAB_PACKAGE = "com.grabtaxi.passenger"
     private val DEFAULT_NUMBER = "+6590855038"
 
     private val callPermissionLauncher = registerForActivityResult(
@@ -33,9 +35,13 @@ class CallActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnCall.setOnClickListener {
-            val input = binding.etPhoneNumber.text?.toString()?.trim() ?: ""
-            if (input.isEmpty()) {
-                binding.etPhoneNumber.hint = "Using default: $DEFAULT_NUMBER"
+            if (!isGrabInstalled()) {
+                AlertDialog.Builder(this)
+                    .setTitle("Grab not installed")
+                    .setMessage("Please install and register for Grab to use this feature.")
+                    .setPositiveButton("OK", null)
+                    .show()
+                return@setOnClickListener
             }
             requestCallPermissionAndDial()
         }
@@ -44,6 +50,15 @@ class CallActivity : AppCompatActivity() {
             SmartWearDataStore.saveBtAddress(applicationContext, "")
             startActivity(Intent(this, ConnectActivity::class.java))
             finish()
+        }
+    }
+
+    private fun isGrabInstalled(): Boolean {
+        return try {
+            packageManager.getPackageInfo(GRAB_PACKAGE, 0)
+            true
+        } catch (e: PackageManager.NameNotFoundException) {
+            false
         }
     }
 
@@ -58,9 +73,6 @@ class CallActivity : AppCompatActivity() {
     }
 
     private fun placeCall() {
-        val input = binding.etPhoneNumber.text?.toString()?.trim() ?: ""
-        val number = if (input.isNotEmpty()) input else DEFAULT_NUMBER
-        val intent = Intent(Intent.ACTION_CALL, Uri.parse("tel:$number"))
-        startActivity(intent)
+        startActivity(Intent(Intent.ACTION_CALL, Uri.parse("tel:$DEFAULT_NUMBER")))
     }
 }
