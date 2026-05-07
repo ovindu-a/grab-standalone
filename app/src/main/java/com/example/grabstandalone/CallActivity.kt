@@ -5,12 +5,18 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.grabstandalone.databinding.ActivityCallBinding
+import com.realsil.sdk.audioconnect.smartwear.ActionStateNotification
+import com.realsil.sdk.audioconnect.smartwear.SmartWearModelCallback
+import com.realsil.sdk.audioconnect.smartwear.SmartWearModelProxy
+
+private const val TAG = "GlassButton"
 
 class CallActivity : AppCompatActivity() {
 
@@ -18,6 +24,10 @@ class CallActivity : AppCompatActivity() {
 
     private val GRAB_PACKAGE = "com.grabtaxi.passenger"
     private val DEFAULT_NUMBER = "+6590855038"
+
+    private val modelClient by lazy {
+        SmartWearModelProxy.getInstance().getModelClient(SmartWearDataStore.btAddress)
+    }
 
     private val callPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -33,6 +43,8 @@ class CallActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCallBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        modelClient?.registerCallback(buttonCallback)
 
         binding.btnCall.setOnClickListener {
             if (!isGrabInstalled()) {
@@ -50,6 +62,28 @@ class CallActivity : AppCompatActivity() {
             SmartWearDataStore.saveBtAddress(applicationContext, "")
             startActivity(Intent(this, ConnectActivity::class.java))
             finish()
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        modelClient?.unregisterCallback(buttonCallback)
+    }
+
+    private val buttonCallback = object : SmartWearModelCallback() {
+        override fun onReceivedDeviceAction(actionType: Int) {
+            super.onReceivedDeviceAction(actionType)
+            Log.d(TAG, "onReceivedDeviceAction actionType=$actionType")
+        }
+
+        override fun onDeviceTriggeredTakePhoto() {
+            super.onDeviceTriggeredTakePhoto()
+            Log.d(TAG, "onDeviceTriggeredTakePhoto (actionType=1 alias)")
+        }
+
+        override fun onActionStateNotificationChanged(notification: ActionStateNotification) {
+            super.onActionStateNotificationChanged(notification)
+            Log.d(TAG, "onActionStateNotificationChanged action=${notification.action} state=${notification.state}")
         }
     }
 
