@@ -15,6 +15,7 @@ import com.example.grabstandalone.databinding.ActivityCallBinding
 import com.realsil.sdk.audioconnect.smartwear.ActionStateNotification
 import com.realsil.sdk.audioconnect.smartwear.SmartWearModelCallback
 import com.realsil.sdk.audioconnect.smartwear.SmartWearModelProxy
+import com.realsil.sdk.bbpro.MultiPeripheralConnectionManager
 
 private const val TAG = "GlassButton"
 
@@ -59,9 +60,7 @@ class CallActivity : AppCompatActivity() {
         }
 
         binding.btnDisconnect.setOnClickListener {
-            SmartWearDataStore.saveBtAddress(applicationContext, "")
-            startActivity(Intent(this, ConnectActivity::class.java))
-            finish()
+            disconnectAndReturn()
         }
     }
 
@@ -96,6 +95,16 @@ class CallActivity : AppCompatActivity() {
             super.onActionStateNotificationChanged(notification)
             Log.d(TAG, "onActionStateNotificationChanged action=${notification.action} state=${notification.state}")
         }
+    }
+
+    private fun disconnectAndReturn() {
+        MultiPeripheralConnectionManager.getInstance(applicationContext)
+            .getPeripheralConnectionManager(SmartWearDataStore.btAddress)
+            .disconnect()
+        SmartWearDataStore.saveBtAddress(applicationContext, "")
+        ConnectStateLiveData.value = false
+        startActivity(Intent(this, ConnectActivity::class.java))
+        finish()
     }
 
     private fun isGrabInstalled(): Boolean {
