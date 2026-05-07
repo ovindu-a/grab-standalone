@@ -79,6 +79,17 @@ class CallActivity : AppCompatActivity() {
         override fun onDeviceTriggeredTakePhoto() {
             super.onDeviceTriggeredTakePhoto()
             Log.d(TAG, "onDeviceTriggeredTakePhoto (actionType=1 alias)")
+            runOnUiThread {
+                if (!isGrabInstalled()) {
+                    AlertDialog.Builder(this@CallActivity)
+                        .setTitle("Grab not installed")
+                        .setMessage("Please install and register for Grab to use this feature.")
+                        .setPositiveButton("OK", null)
+                        .show()
+                    return@runOnUiThread
+                }
+                requestCallPermissionAndDial()
+            }
         }
 
         override fun onActionStateNotificationChanged(notification: ActionStateNotification) {
