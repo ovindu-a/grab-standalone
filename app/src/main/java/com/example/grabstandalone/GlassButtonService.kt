@@ -52,6 +52,7 @@ class GlassButtonService : Service() {
         override fun onReceivedDeviceAction(actionType: Int) {
             super.onReceivedDeviceAction(actionType)
             Log.d(TAG, "onReceivedDeviceAction actionType=$actionType")
+            if (actionType == 2) endCall()
         }
 
         override fun onDeviceTriggeredTakePhoto() {
