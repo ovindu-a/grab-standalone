@@ -22,7 +22,6 @@ import com.realsil.sdk.audioconnect.smartwear.SmartWearModelProxy
 
 private const val TAG = "GlassButton"
 private const val GRAB_PACKAGE = "com.grabtaxi.passenger"
-private const val DEFAULT_NUMBER = "+6590855038"
 private const val NOTIFICATION_ID = 1
 private const val CHANNEL_ID = "glass_button"
 
@@ -125,7 +124,7 @@ class GlassButtonService : Service() {
             return
         }
         startActivity(
-            Intent(Intent.ACTION_CALL, Uri.parse("tel:$DEFAULT_NUMBER"))
+            Intent(Intent.ACTION_CALL, Uri.parse("tel:${SmartWearDataStore.activeNumber()}"))
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         )
     }

@@ -8,6 +8,7 @@
     <color name="accent_purple">#6B62A8</color>
     <!-- Pressed/darker accent -->
     <color name="accent_purple_dark">#574F8E</color>
+    <color name="accent_purple_light">#9D97C8</color>
     <!-- Text -->
     <color name="text_primary">#EDE9FF</color>
     <color name="text_muted">#8C88AC</color>

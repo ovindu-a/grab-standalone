@@ -30,7 +30,6 @@ class CallActivity : AppCompatActivity() {
     private lateinit var connectivityManager: ConnectivityManager
 
     private val GRAB_PACKAGE = "com.grabtaxi.passenger"
-    private val DEFAULT_NUMBER = "+6590855038"
 
     private var isCellularAvailable = true
 
@@ -61,6 +60,16 @@ class CallActivity : AppCompatActivity() {
             networkCallback
         )
         checkCellular()
+
+        SmartWearDataStore.loadMode(this)
+        binding.toggleMode.check(if (SmartWearDataStore.isProd) R.id.btnProd else R.id.btnSandbox)
+        updateToggleColors(if (SmartWearDataStore.isProd) R.id.btnProd else R.id.btnSandbox)
+        binding.toggleMode.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isChecked) {
+                SmartWearDataStore.saveMode(this, checkedId == R.id.btnProd)
+                updateToggleColors(checkedId)
+            }
+        }
 
         GlassButtonService.start(this)
 
@@ -125,6 +134,18 @@ class CallActivity : AppCompatActivity() {
         }
     }
 
+    private fun updateToggleColors(checkedId: Int) {
+        listOf(binding.btnProd, binding.btnSandbox).forEach { btn ->
+            val selected = btn.id == checkedId
+            btn.backgroundTintList = ColorStateList.valueOf(
+                ContextCompat.getColor(this, if (selected) R.color.accent_purple_light else android.R.color.transparent)
+            )
+            btn.setTextColor(
+                ContextCompat.getColor(this, if (selected) R.color.white else R.color.text_muted)
+            )
+        }
+    }
+
     private fun showNoCellularDialog() {
         AlertDialog.Builder(this)
             .setTitle("Cellular network not available")
@@ -175,6 +196,6 @@ class CallActivity : AppCompatActivity() {
     }
 
     private fun placeCall() {
-        startActivity(Intent(Intent.ACTION_CALL, Uri.parse("tel:$DEFAULT_NUMBER")))
+        startActivity(Intent(Intent.ACTION_CALL, Uri.parse("tel:${SmartWearDataStore.activeNumber()}")))
     }
 }

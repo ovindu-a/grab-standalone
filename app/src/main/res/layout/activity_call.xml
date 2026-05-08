@@ -29,6 +29,36 @@
         android:textColor="@color/text_muted"
         android:textSize="13sp" />
 
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:singleSelection="true"
+        app:selectionRequired="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnProd"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Prod"
+            android:textSize="13sp"
+            app:strokeColor="@color/accent_purple_light" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSandbox"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sandbox"
+            android:textSize="13sp"
+            app:strokeColor="@color/accent_purple_light" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
