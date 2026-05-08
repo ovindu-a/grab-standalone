@@ -38,13 +38,24 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnCall"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="64dp"
         android:text="Call"
-        android:textSize="17sp"
+        android:textSize="20sp"
         android:textColor="@color/white"
         android:fontFamily="sans-serif-medium"
         app:backgroundTint="@color/accent_purple"
         app:cornerRadius="12dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:alpha="0.6"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Press trigger button on glasses to call · Press twice to cancel"
+        android:textColor="@color/text_muted"
+        android:textSize="13sp" />
 
     <View
         android:layout_width="match_parent"
