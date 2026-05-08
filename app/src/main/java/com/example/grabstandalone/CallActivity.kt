@@ -3,6 +3,11 @@ package com.example.grabstandalone
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.ColorStateList
+import android.net.ConnectivityManager
+import android.net.Network
+import android.net.NetworkCapabilities
+import android.net.NetworkRequest
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
@@ -16,9 +21,12 @@ import com.realsil.sdk.bbpro.MultiPeripheralConnectionManager
 class CallActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCallBinding
+    private lateinit var connectivityManager: ConnectivityManager
 
     private val GRAB_PACKAGE = "com.grabtaxi.passenger"
     private val DEFAULT_NUMBER = "+6590855038"
+
+    private var isCellularAvailable = true
 
     private val callPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -30,14 +38,35 @@ class CallActivity : AppCompatActivity() {
         }
     }
 
+    private val networkCallback = object : ConnectivityManager.NetworkCallback() {
+        override fun onAvailable(network: Network) = checkCellular()
+        override fun onLost(network: Network) = checkCellular()
+        override fun onCapabilitiesChanged(network: Network, caps: NetworkCapabilities) = checkCellular()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCallBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        connectivityManager = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
+        connectivityManager.registerNetworkCallback(
+            NetworkRequest.Builder().addTransportType(NetworkCapabilities.TRANSPORT_CELLULAR).build(),
+            networkCallback
+        )
+        checkCellular()
+
         GlassButtonService.start(this)
 
         binding.btnCall.setOnClickListener {
+            if (!isCellularAvailable) {
+                AlertDialog.Builder(this)
+                    .setTitle("Cellular network not available")
+                    .setMessage("Connect to mobile network to take a call")
+                    .setPositiveButton("OK", null)
+                    .show()
+                return@setOnClickListener
+            }
             if (!isGrabInstalled()) {
                 AlertDialog.Builder(this)
                     .setTitle("Grab not installed")
@@ -52,6 +81,27 @@ class CallActivity : AppCompatActivity() {
         binding.btnDisconnect.setOnClickListener {
             disconnectAndReturn()
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        connectivityManager.unregisterNetworkCallback(networkCallback)
+    }
+
+    private fun checkCellular() {
+        isCellularAvailable = connectivityManager.allNetworks.any { network ->
+            connectivityManager.getNetworkCapabilities(network)
+                ?.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) == true
+        }
+        runOnUiThread { updateCallButton() }
+    }
+
+    private fun updateCallButton() {
+        val tint = if (isCellularAvailable) R.color.accent_purple else R.color.surface
+        binding.btnCall.backgroundTintList = ColorStateList.valueOf(
+            ContextCompat.getColor(this, tint)
+        )
+        binding.btnCall.alpha = if (isCellularAvailable) 1f else 0.5f
     }
 
     private fun disconnectAndReturn() {
