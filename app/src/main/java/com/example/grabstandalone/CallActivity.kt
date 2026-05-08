@@ -5,19 +5,13 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.grabstandalone.databinding.ActivityCallBinding
-import com.realsil.sdk.audioconnect.smartwear.ActionStateNotification
-import com.realsil.sdk.audioconnect.smartwear.SmartWearModelCallback
-import com.realsil.sdk.audioconnect.smartwear.SmartWearModelProxy
 import com.realsil.sdk.bbpro.MultiPeripheralConnectionManager
-
-private const val TAG = "GlassButton"
 
 class CallActivity : AppCompatActivity() {
 
@@ -25,10 +19,6 @@ class CallActivity : AppCompatActivity() {
 
     private val GRAB_PACKAGE = "com.grabtaxi.passenger"
     private val DEFAULT_NUMBER = "+6590855038"
-
-    private val modelClient by lazy {
-        SmartWearModelProxy.getInstance().getModelClient(SmartWearDataStore.btAddress)
-    }
 
     private val callPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -45,7 +35,7 @@ class CallActivity : AppCompatActivity() {
         binding = ActivityCallBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        modelClient?.registerCallback(buttonCallback)
+        GlassButtonService.start(this)
 
         binding.btnCall.setOnClickListener {
             if (!isGrabInstalled()) {
@@ -64,40 +54,8 @@ class CallActivity : AppCompatActivity() {
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        modelClient?.unregisterCallback(buttonCallback)
-    }
-
-    private val buttonCallback = object : SmartWearModelCallback() {
-        override fun onReceivedDeviceAction(actionType: Int) {
-            super.onReceivedDeviceAction(actionType)
-            Log.d(TAG, "onReceivedDeviceAction actionType=$actionType")
-        }
-
-        override fun onDeviceTriggeredTakePhoto() {
-            super.onDeviceTriggeredTakePhoto()
-            Log.d(TAG, "onDeviceTriggeredTakePhoto (actionType=1 alias)")
-            runOnUiThread {
-                if (!isGrabInstalled()) {
-                    AlertDialog.Builder(this@CallActivity)
-                        .setTitle("Grab not installed")
-                        .setMessage("Please install and register for Grab to use this feature.")
-                        .setPositiveButton("OK", null)
-                        .show()
-                    return@runOnUiThread
-                }
-                requestCallPermissionAndDial()
-            }
-        }
-
-        override fun onActionStateNotificationChanged(notification: ActionStateNotification) {
-            super.onActionStateNotificationChanged(notification)
-            Log.d(TAG, "onActionStateNotificationChanged action=${notification.action} state=${notification.state}")
-        }
-    }
-
     private fun disconnectAndReturn() {
+        GlassButtonService.stop(this)
         MultiPeripheralConnectionManager.getInstance(applicationContext)
             .getPeripheralConnectionManager(SmartWearDataStore.btAddress)
             .disconnect()

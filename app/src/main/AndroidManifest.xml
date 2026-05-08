@@ -16,6 +16,8 @@
 
     <!-- ── Phone calls ────────────────────────────────────────────────── -->
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
 
     <!-- ── Audio ──────────────────────────────────────────────────────── -->
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
@@ -29,6 +31,7 @@
     <!-- ── System ─────────────────────────────────────────────────────── -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
 
     <!-- Required on API 30+ to detect other installed packages -->
     <queries>
@@ -71,6 +74,11 @@
             android:exported="false"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
+
+        <service
+            android:name=".GlassButtonService"
+            android:exported="false"
+            android:foregroundServiceType="connectedDevice" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

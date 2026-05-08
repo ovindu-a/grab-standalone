@@ -23,13 +23,19 @@ class ConnectActivity : BaseActivity() {
     private lateinit var viewModel: ConnectViewModel
 
     private val requiredPermissions: Array<String>
-        get() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            arrayOf(
-                Manifest.permission.BLUETOOTH_SCAN,
-                Manifest.permission.BLUETOOTH_CONNECT
-            )
-        } else {
-            arrayOf(Manifest.permission.ACCESS_FINE_LOCATION)
+        get() {
+            val perms = mutableListOf<String>()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                perms += Manifest.permission.BLUETOOTH_SCAN
+                perms += Manifest.permission.BLUETOOTH_CONNECT
+            } else {
+                perms += Manifest.permission.ACCESS_FINE_LOCATION
+            }
+            perms += Manifest.permission.READ_PHONE_STATE
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                perms += Manifest.permission.ANSWER_PHONE_CALLS
+            }
+            return perms.toTypedArray()
         }
 
     private val permissionLauncher = registerForActivityResult(
