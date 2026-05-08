@@ -20,6 +20,10 @@ import com.realsil.sdk.bbpro.MultiPeripheralConnectionManager
 
 class CallActivity : AppCompatActivity() {
 
+    companion object {
+        const val EXTRA_REQUEST_CALL_PERMISSION = "request_call_permission"
+    }
+
     private lateinit var binding: ActivityCallBinding
     private lateinit var connectivityManager: ConnectivityManager
 
@@ -57,6 +61,10 @@ class CallActivity : AppCompatActivity() {
         checkCellular()
 
         GlassButtonService.start(this)
+
+        if (intent.getBooleanExtra(EXTRA_REQUEST_CALL_PERMISSION, false)) {
+            requestCallPermissionAndDial()
+        }
 
         binding.btnCall.setOnClickListener {
             if (!isCellularAvailable) {
@@ -102,6 +110,13 @@ class CallActivity : AppCompatActivity() {
             ContextCompat.getColor(this, tint)
         )
         binding.btnCall.alpha = if (isCellularAvailable) 1f else 0.5f
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        if (intent.getBooleanExtra(EXTRA_REQUEST_CALL_PERMISSION, false)) {
+            requestCallPermissionAndDial()
+        }
     }
 
     private fun disconnectAndReturn() {

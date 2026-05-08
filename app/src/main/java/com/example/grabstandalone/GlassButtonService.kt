@@ -94,7 +94,12 @@ class GlassButtonService : Service() {
             return
         }
         if (checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            Log.d(TAG, "CALL_PHONE not granted")
+            Log.d(TAG, "CALL_PHONE not granted, requesting via CallActivity")
+            startActivity(
+                Intent(this, CallActivity::class.java)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                    .putExtra(CallActivity.EXTRA_REQUEST_CALL_PERMISSION, true)
+            )
             return
         }
         startActivity(
