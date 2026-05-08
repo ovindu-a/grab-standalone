@@ -13,4 +13,7 @@
     <color name="text_muted">#8C88AC</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <!-- Override Realtek SDK colours -->
+    <color name="toolBarColor">@color/bg_dark</color>
+    <color name="primaryColor">@color/accent_purple</color>
 </resources>

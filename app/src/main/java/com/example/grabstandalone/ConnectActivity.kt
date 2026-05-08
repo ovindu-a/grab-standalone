@@ -60,7 +60,10 @@ class ConnectActivity : BaseActivity() {
                 viewModel.getConnectedAddress()?.let { address ->
                     SmartWearDataStore.saveBtAddress(applicationContext, address)
                 }
-                startActivity(Intent(this, CallActivity::class.java))
+                startActivity(
+                    Intent(this, CallActivity::class.java)
+                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                )
                 finish()
             }
         }
