@@ -22,6 +22,8 @@ class CallActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_REQUEST_CALL_PERMISSION = "request_call_permission"
+        const val EXTRA_SHOW_GRAB_NOT_INSTALLED = "show_grab_not_installed"
+        const val EXTRA_SHOW_NO_CELLULAR = "show_no_cellular"
     }
 
     private lateinit var binding: ActivityCallBinding
@@ -65,22 +67,20 @@ class CallActivity : AppCompatActivity() {
         if (intent.getBooleanExtra(EXTRA_REQUEST_CALL_PERMISSION, false)) {
             requestCallPermissionAndDial()
         }
+        if (intent.getBooleanExtra(EXTRA_SHOW_GRAB_NOT_INSTALLED, false)) {
+            showGrabNotInstalledDialog()
+        }
+        if (intent.getBooleanExtra(EXTRA_SHOW_NO_CELLULAR, false)) {
+            showNoCellularDialog()
+        }
 
         binding.btnCall.setOnClickListener {
             if (!isCellularAvailable) {
-                AlertDialog.Builder(this)
-                    .setTitle("Cellular network not available")
-                    .setMessage("Connect to mobile network to take a call")
-                    .setPositiveButton("OK", null)
-                    .show()
+                showNoCellularDialog()
                 return@setOnClickListener
             }
             if (!isGrabInstalled()) {
-                AlertDialog.Builder(this)
-                    .setTitle("Grab not installed")
-                    .setMessage("Please install and register for Grab to use this feature.")
-                    .setPositiveButton("OK", null)
-                    .show()
+                showGrabNotInstalledDialog()
                 return@setOnClickListener
             }
             requestCallPermissionAndDial()
@@ -117,6 +117,28 @@ class CallActivity : AppCompatActivity() {
         if (intent.getBooleanExtra(EXTRA_REQUEST_CALL_PERMISSION, false)) {
             requestCallPermissionAndDial()
         }
+        if (intent.getBooleanExtra(EXTRA_SHOW_GRAB_NOT_INSTALLED, false)) {
+            showGrabNotInstalledDialog()
+        }
+        if (intent.getBooleanExtra(EXTRA_SHOW_NO_CELLULAR, false)) {
+            showNoCellularDialog()
+        }
+    }
+
+    private fun showNoCellularDialog() {
+        AlertDialog.Builder(this)
+            .setTitle("Cellular network not available")
+            .setMessage("Connect to mobile network to take a call")
+            .setPositiveButton("OK", null)
+            .show()
+    }
+
+    private fun showGrabNotInstalledDialog() {
+        AlertDialog.Builder(this)
+            .setTitle("Grab not installed")
+            .setMessage("Please install and register for Grab to use this feature.")
+            .setPositiveButton("OK", null)
+            .show()
     }
 
     private fun disconnectAndReturn() {

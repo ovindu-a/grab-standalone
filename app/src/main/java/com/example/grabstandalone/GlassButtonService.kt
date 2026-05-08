@@ -86,11 +86,33 @@ class GlassButtonService : Service() {
         }
     }
 
+    private fun isCellularAvailable(): Boolean {
+        val cm = getSystemService(CONNECTIVITY_SERVICE) as android.net.ConnectivityManager
+        return cm.allNetworks.any { network ->
+            cm.getNetworkCapabilities(network)
+                ?.hasTransport(android.net.NetworkCapabilities.TRANSPORT_CELLULAR) == true
+        }
+    }
+
     private fun makeCall() {
+        if (!isCellularAvailable()) {
+            Log.d(TAG, "no cellular, showing dialog via CallActivity")
+            startActivity(
+                Intent(this, CallActivity::class.java)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                    .putExtra(CallActivity.EXTRA_SHOW_NO_CELLULAR, true)
+            )
+            return
+        }
         try {
             packageManager.getPackageInfo(GRAB_PACKAGE, 0)
         } catch (e: PackageManager.NameNotFoundException) {
-            Log.d(TAG, "Grab not installed, skipping call")
+            Log.d(TAG, "Grab not installed, showing dialog via CallActivity")
+            startActivity(
+                Intent(this, CallActivity::class.java)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                    .putExtra(CallActivity.EXTRA_SHOW_GRAB_NOT_INSTALLED, true)
+            )
             return
         }
         if (checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
