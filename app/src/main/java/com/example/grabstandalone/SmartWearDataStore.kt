@@ -10,8 +10,8 @@ object SmartWearDataStore {
     private const val KEY_IS_PROD = "is_prod"
     private const val DEFAULT_BT_ADDRESS = "0:0:0:0"
 
-    const val PROD_NUMBER    = "+6590855038"
-    const val SANDBOX_NUMBER = "+6585066005"
+    const val PROD_NUMBER    = "+6531380000"
+    const val SANDBOX_NUMBER = "+6531387171"
 
     var btAddress: String = DEFAULT_BT_ADDRESS
         get() = if (TextUtils.isEmpty(field)) DEFAULT_BT_ADDRESS else field

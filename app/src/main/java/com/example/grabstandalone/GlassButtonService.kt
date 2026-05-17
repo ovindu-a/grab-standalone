@@ -8,6 +8,7 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Build
 import android.os.IBinder
@@ -68,15 +69,25 @@ class GlassButtonService : Service() {
 
     private fun handleButtonPress() {
         val telephonyManager = getSystemService(TELEPHONY_SERVICE) as TelephonyManager
+        val readPhoneStateGranted = checkSelfPermission(Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED
+        val answerCallsGranted = checkSelfPermission(Manifest.permission.ANSWER_PHONE_CALLS) == PackageManager.PERMISSION_GRANTED
+        Log.d(TAG, "handleButtonPress READ_PHONE_STATE=$readPhoneStateGranted ANSWER_PHONE_CALLS=$answerCallsGranted SDK=${Build.VERSION.SDK_INT}")
 
         @Suppress("DEPRECATION")
-        val callState = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S &&
-            checkSelfPermission(Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED
-        ) {
+        val callState = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && !readPhoneStateGranted) {
+            Log.w(TAG, "READ_PHONE_STATE not granted on API ${Build.VERSION.SDK_INT}, defaulting to IDLE")
             TelephonyManager.CALL_STATE_IDLE
         } else {
             telephonyManager.callState
         }
+
+        val stateName = when (callState) {
+            TelephonyManager.CALL_STATE_IDLE -> "IDLE"
+            TelephonyManager.CALL_STATE_RINGING -> "RINGING"
+            TelephonyManager.CALL_STATE_OFFHOOK -> "OFFHOOK"
+            else -> "UNKNOWN($callState)"
+        }
+        Log.d(TAG, "handleButtonPress callState=$stateName")
 
         when (callState) {
             TelephonyManager.CALL_STATE_OFFHOOK,
@@ -123,19 +134,36 @@ class GlassButtonService : Service() {
             )
             return
         }
-        startActivity(
-            Intent(Intent.ACTION_CALL, Uri.parse("tel:${SmartWearDataStore.activeNumber()}"))
-                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        )
+        Log.d(TAG, "playing calling_a_grab sound before dialing")
+        val player = MediaPlayer.create(this, R.raw.calling_a_grab)
+        player?.setOnCompletionListener { mp ->
+            mp.release()
+            Log.d(TAG, "sound complete, dialing now")
+            startActivity(
+                Intent(Intent.ACTION_CALL, Uri.parse("tel:${SmartWearDataStore.activeNumber()}"))
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            )
+        }
+        player?.start() ?: run {
+            Log.w(TAG, "MediaPlayer.create returned null, dialing without sound")
+            startActivity(
+                Intent(Intent.ACTION_CALL, Uri.parse("tel:${SmartWearDataStore.activeNumber()}"))
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            )
+        }
     }
 
     private fun endCall() {
+        Log.d(TAG, "endCall called, SDK=${Build.VERSION.SDK_INT}")
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             if (checkSelfPermission(Manifest.permission.ANSWER_PHONE_CALLS) != PackageManager.PERMISSION_GRANTED) {
-                Log.d(TAG, "ANSWER_PHONE_CALLS not granted, cannot end call")
+                Log.w(TAG, "endCall: ANSWER_PHONE_CALLS not granted, cannot end call")
                 return
             }
+            Log.d(TAG, "endCall: calling TelecomManager.endCall()")
             (getSystemService(TELECOM_SERVICE) as TelecomManager).endCall()
+        } else {
+            Log.w(TAG, "endCall: SDK < P (${Build.VERSION.SDK_INT}), endCall() not supported")
         }
     }
 
